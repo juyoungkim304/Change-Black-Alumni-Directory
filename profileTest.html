@@ -1,0 +1,120 @@
+<?php
+	include('dbconnect.php');
+	$col = "select * from blackalumni";
+	$query = mysql_query($col);
+	$data = mysql_fetch_array($query);
+?>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+    	<title>Vanderbilt Black Alumni</title>
+
+   	<link rel="stylesheet" type="text/css" href="profileStyle.css">
+
+    	<link rel="stylesheet"
+
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+
+          crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-inverse bg-light">
+
+        <a class="navbar-brand">Vanderbilt Black Alumni Directory</a>
+	    
+	<form class="form-inline">
+    	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  	</form>
+
+    </nav>
+
+
+    <div id= "name" class="row">
+
+	<form>
+
+	<h1><input type="text" value="<?php echo $data[first_name]?> (<?php echo $data[preferred_name]?>) <?php echo $data[last_name]?>"/></h1>
+
+	</form>
+
+    </div>
+
+
+    <hr>
+
+
+    <div class= "row">
+
+      <div id = "first-col" class= "col-md-4">
+	      
+	<span>
+
+        <img id = "image" src="person.jpg" height= 70% width= 70%>
+
+	</span>
+	      
+
+	<h2>Biography</h2>
+
+        <form>
+	<p><input type="text" value="<?php echo $data[bio]?>"/></p>
+	</form>
+	
+
+	<h2>Contact</h2>
+
+	<h3>Phone Number</h3>
+
+	<form>
+	<p><input type="text" value="<?php echo $data[phone]?>"/></p>
+	</form>
+
+	<p><a href="mailto:@vanderbilt.edu?subject=Peabody Contact" "email me"> Click here for email</a></p>
+
+
+      </div>
+
+        
+
+      <div id = "body" class= "col-md-4">
+
+	      
+	<h3>Relation to Vanderbilt</h3>
+
+	<form>
+	<p><input type="text" value="<?php echo $data[relation]?>"/></p>
+	</form>
+
+	<h3>Major/Program</h3>
+
+	<form>
+	<p><input type="text" value="<?php echo $data[major_or_program]?>"/></p>
+	</form>
+
+	<h3>Location</h3>
+
+	<form>
+	<p><input type="text" value="<?php echo $data[location]?>"/></p>
+	</form>
+
+      </div>
+
+    </div>
+
+</body>
+
+</html>
+
