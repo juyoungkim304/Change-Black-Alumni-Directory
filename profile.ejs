@@ -1,0 +1,96 @@
+<head>
+
+	<meta charset="UTF-8">
+
+    	<title>Vanderbilt Black Alumni</title>
+
+   	<link rel="stylesheet" type="text/css" href="/public/profilepage/styles/profileStyle.css">
+
+    	<link rel="stylesheet"
+
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+
+          crossorigin="anonymous">
+
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-inverse bg-light">
+
+        <a class="navbar-brand">Vanderbilt Black Alumni Directory</a>
+
+    </nav>
+
+
+    <div id= "name" class="row">
+
+	<h1><%=pcbg[i].first_name%> <%=pcbg[i].last_name%> (<%=pcbg[i].preferred_name%>) </h1>
+
+    </div>
+
+
+    <hr>
+
+
+    <div class= "row">
+
+      <div id = "first-col" class= "col-md-4">
+	      
+	<span>
+
+        <img id = "image" src="person.jpg" height= 70% width= 70%>
+
+	</span>
+	      
+
+	<h2>Biography</h2>
+
+        <p><%=pcbg[i].bio%></p>
+	      
+
+	<h2>Contact</h2>
+
+	<h3>Phone Number</h3>
+
+	<p><%=pcbg[i].phone%></p>
+	
+	<h3>Email</h3>
+
+	<p><a href= "mailto:"<%=pcbg[i].email%> Click here for email</a></p>
+
+
+      </div>
+
+        
+
+      <div id = "body" class= "col-md-4">
+
+	      
+	<h3>Relation to Vanderbilt</h3>
+
+	<p><%=pcbg[i].relation%></p>
+
+	<h3>Major/Program</h3>
+
+	<p><%=pcbg[i].major_or_program%></p>
+
+	<h3>Location</h3>
+
+	<p><%pcbg[i].location%></p>
+	
+
+      </div>
+
+   </div>
+
+   <script type="text/javascript" src="/public/searchresultspage/scripts/populateWebpage.js"></script>
+
+</body>
+
+</html>
+
