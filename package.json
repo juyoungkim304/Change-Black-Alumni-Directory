@@ -1,0 +1,19 @@
+{
+  "name": "change-black-and-latinx-directory",
+  "version": "1.0.0",
+  "description": "Directory for Black Alumni community of Vanderbilt University",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osmanzm/Change-Black-and-Latinx-Directory.git"
+  },
+  "author": "Jonathan Steward, Arjun Keerthi, Joe Huang, Juyoung Kim, Zubeir Osman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osmanzm/Change-Black-and-Latinx-Directory/issues"
+  },
+  "homepage": "https://github.com/osmanzm/Change-Black-and-Latinx-Directory#readme"
+}
