@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
 <head>
 
 	<meta charset="UTF-8">
 
     	<title>Vanderbilt Black Alumni</title>
 
-   	<link rel="stylesheet" type="text/css" href="profileStyle.css">
+   	<link rel="stylesheet" type="text/css" href="/public/profilepage/styles/profileStyle.css">
 
     	<link rel="stylesheet"
 
@@ -18,6 +14,7 @@
 
           crossorigin="anonymous">
 
+
 </head>
 
 
@@ -26,18 +23,13 @@
     <nav class="navbar navbar-inverse bg-light">
 
         <a class="navbar-brand">Vanderbilt Black Alumni Directory</a>
-	    
-	<form class="form-inline">
-    	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  	</form>
 
     </nav>
 
 
     <div id= "name" class="row">
 
-	<h1>NAME</h1>
+	<h1><%=pcbg[i].first_name%> <%=pcbg[i].last_name%> (<%=pcbg[i].preferred_name%>) </h1>
 
     </div>
 
@@ -58,16 +50,18 @@
 
 	<h2>Biography</h2>
 
-        <p>BIO</p>
+        <p><%=pcbg[i].bio%></p>
 	      
 
 	<h2>Contact</h2>
 
 	<h3>Phone Number</h3>
 
-	<p>000-000-0000</p>
+	<p><%=pcbg[i].phone%></p>
+	
+	<h3>Email</h3>
 
-	<p><a href="mailto:@vanderbilt.edu?subject=Peabody Contact" "email me"> Click here for email</a></p>
+	<p><a href= "mailto:"<%=pcbg[i].email%> Click here for email</a></p>
 
 
       </div>
@@ -79,20 +73,22 @@
 	      
 	<h3>Relation to Vanderbilt</h3>
 
-	<p>RELATION</p>
+	<p><%=pcbg[i].relation%></p>
 
 	<h3>Major/Program</h3>
 
-	<p>MAJOR/PROGRAM</p>
+	<p><%=pcbg[i].major_or_program%></p>
 
 	<h3>Location</h3>
 
-	<p>LOCATION</p>
+	<p><%pcbg[i].location%></p>
 	
 
       </div>
 
-    </div>
+   </div>
+
+   <script type="text/javascript" src="/public/searchresultspage/scripts/populateWebpage.js"></script>
 
 </body>
 
