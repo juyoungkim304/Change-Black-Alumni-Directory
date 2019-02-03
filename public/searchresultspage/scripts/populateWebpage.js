@@ -110,10 +110,16 @@ function createContent(content) {
     relation.setAttribute('class', 'card-text');
     relation.innerHTML = 'Status: ' + content['relation'];
 
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+    var link = document.createElement('a');
+    link.setAttribute('class', 'btn btn-primary');
+    link.innerHTML = "More";
+
     // Append information (besides image) to the inner div
     innerDiv.appendChild(name);
     innerDiv.appendChild(major);
     innerDiv.appendChild(relation);
+    innerDiv.appendChild(link);
 
     // Append image and inner div to the overall element div that is returned
     outsideDiv.appendChild(img);
