@@ -7,7 +7,8 @@ module.exports = {
 				res.redirect('/');
 			}
 			console.log("Reached profile.js");
-			res.render('pages/profile.ejs',{pcbg: result, index: 3});
+			//console.log(req.params[0]);
+			res.render('pages/profile.ejs',{pcbg: result, index: req.params[0]});
 		});
 	}
 }
