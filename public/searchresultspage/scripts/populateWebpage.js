@@ -110,7 +110,6 @@ function createContent(content) {
     relation.setAttribute('class', 'card-text');
     relation.innerHTML = 'Status: ' + content['relation'];
 
-    <a href="#" class="btn btn-primary">Go somewhere</a>
     var link = document.createElement('a');
     link.setAttribute('class', 'btn btn-primary');
     link.innerHTML = "More";

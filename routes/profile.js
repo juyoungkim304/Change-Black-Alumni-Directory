@@ -1,13 +1,13 @@
 module.exports = {
 	profilePage: (req, res) => {
-		let query = "SELECT * FROM pcbg WHERE id = 2";
+		let query = "SELECT * FROM pcbg";
 
-		db.query(query, (error, result) => {
-			if (error){
+		db.query(query, (err, result) => {
+			if (err){
 				res.redirect('/');
 			}
-			res.render('profile.ejs',{pcbg: result});
+			console.log("Reached profile.js");
+			res.render('pages/profile.ejs',{pcbg: result, index: 3});
 		});
-	});
-	
-});
+	}
+}

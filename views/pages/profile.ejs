@@ -29,7 +29,7 @@
 
     <div id= "name" class="row">
 
-	<h1><%=pcbg[i].first_name%> <%=pcbg[i].last_name%> (<%=pcbg[i].preferred_name%>) </h1>
+	<h1><%=pcbg[index].first_name%> <%=pcbg[index].last_name%> (<%=pcbg[index].preferred_name%>) </h1>
 
     </div>
 
@@ -50,18 +50,18 @@
 
 	<h2>Biography</h2>
 
-        <p><%=pcbg[i].bio%></p>
+        <p><%=pcbg[index].bio%></p>
 	      
 
 	<h2>Contact</h2>
 
 	<h3>Phone Number</h3>
 
-	<p><%=pcbg[i].phone%></p>
+	<p><%=pcbg[index].phone%></p>
 	
 	<h3>Email</h3>
 
-	<p><a href= "mailto:"<%=pcbg[i].email%> Click here for email</a></p>
+	<p><a href= "mailto:"<%=pcbg[index].email%> Click here for email</a></p>
 
 
       </div>
@@ -73,22 +73,20 @@
 	      
 	<h3>Relation to Vanderbilt</h3>
 
-	<p><%=pcbg[i].relation%></p>
+	<p><%=pcbg[index].relation%></p>
 
 	<h3>Major/Program</h3>
 
-	<p><%=pcbg[i].major_or_program%></p>
+	<p><%=pcbg[index].major_or_program%></p>
 
 	<h3>Location</h3>
 
-	<p><%pcbg[i].location%></p>
+	<p><%pcbg[index].location%></p>
 	
 
       </div>
 
    </div>
-
-   <script type="text/javascript" src="/public/searchresultspage/scripts/populateWebpage.js"></script>
 
 </body>
 
