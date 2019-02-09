@@ -7,6 +7,7 @@ To run node app:
 3. If you haven't already, run the following commands in your terminal:
    - `npm install ejs`
    - `npm install express`
+   - `npm install mysql`
 4. In your terminal, run `node app`
 5. In your browser, navigate to `localhost:8080` and you should be good to go!
 
