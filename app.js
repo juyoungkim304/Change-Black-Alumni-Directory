@@ -18,6 +18,7 @@ db.connect((err) => {
 global.db = db;
 
 const {profilePage} = require('./routes/profile.js');
+const {searchPage} = require('./routes/searchresults.js');
 
 app.set('view engine', 'ejs');
 
@@ -30,10 +31,7 @@ app.get('/', function(req, res) {
 
 app.get(/^\/profile\$(\d+)/, profilePage);
 
-app.get(/^\/searchresults=(.+)/, (req, res) => {
-    console.log('Reached searchresults.ejs');
-    res.render('pages/searchresults');
-})
+app.get(/^\/searchresults=&(.+)/, searchPage);
 
 app.listen('8080');
 console.log("Listening at 8080...");

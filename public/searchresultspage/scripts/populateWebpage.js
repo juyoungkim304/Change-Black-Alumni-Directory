@@ -1,5 +1,5 @@
 // Test array of json objects - will need to figure out how to retrieve this format of data from database
-var results = [
+/*var results = [
     {
         'first_name': 'Bill',
         'last_name' : 'Truck',
@@ -35,7 +35,7 @@ var results = [
         'major'     : 'Human Organization and Development',
         'relation'  : 'Graduate Student'
     }
-]
+]*/
 
 // Populates webpage with data given in 'results' parameter, which is a list of json objects
 function fillInData(results) {
@@ -98,12 +98,12 @@ function createContent(content) {
     // Name
     var name = document.createElement('h5');
     name.setAttribute('class', 'card-title');
-    name.innerHTML = content['first_name'] + ' ' + content['last_name'];
+    name.innerHTML = content.first_name + ' ' + content.last_name;
 
     // Major
     var major = document.createElement('p');
     major.setAttribute('class', 'card-text');
-    major.innerHTML = 'Major: ' + content['major'];
+    major.innerHTML = 'Major: ' + content['major_or_program'];
 
     // Relation to Vanderbilt
     var relation = document.createElement('p');
@@ -127,7 +127,21 @@ function createContent(content) {
     return outsideDiv;
 }
 
-fillInData(results);
+console.log("Inside populateWebpage.js");
+
+fillInData(pcbg);
+
+/*let query = "SELECT first_name, last_name, major_or_program, relation FROM pcbg where last_name='James'";
+
+db.query(query, (err, result) => {
+    if (err){s
+        res.redirect('/');
+    }
+    console.log("Reached searchresults.js");
+    console.log(req.params[0]);
+    console.log(result);
+    fillInData(result);
+});*/
 
 // If we follow php server side script path...
 //$.ajax({url: 'query.php', type: 'GET', datatype: 'json', success: fillInData(results)});
