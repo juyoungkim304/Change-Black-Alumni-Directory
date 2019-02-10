@@ -31,7 +31,7 @@ app.get('/', function(req, res) {
 
 app.get(/^\/profile\$(\d+)/, profilePage);
 
-app.get(/^\/searchresults=&(.+)/, searchPage);
+app.get(/^\/searchresults=&(.*)/, searchPage);
 
 app.listen('8080');
 console.log("Listening at 8080...");

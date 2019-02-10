@@ -1,42 +1,3 @@
-// Test array of json objects - will need to figure out how to retrieve this format of data from database
-/*var results = [
-    {
-        'first_name': 'Bill',
-        'last_name' : 'Truck',
-        'image'     : 'https://www.curciodermatology.com/wp-content/uploads/vanderbilt.png',
-        'major'     : 'Economics',
-        'relation'  : 'Alumni'
-    },
-    {
-        'first_name': 'Fred',
-        'last_name' : 'Johnson',
-        'image'     : 'https://www.curciodermatology.com/wp-content/uploads/vanderbilt.png',
-        'major'     : 'Electrical Engineering',
-        'relation'  : 'Graduate Student'
-    },
-    {
-        'first_name': 'Alfredo',
-        'last_name' : 'Baker',
-        'image'     : 'https://www.curciodermatology.com/wp-content/uploads/vanderbilt.png',
-        'major'     : 'Spanish',
-        'relation'  : 'Alumni'
-    },
-    {
-        'first_name': 'Dave',
-        'last_name' : 'Chico',
-        'image'     : 'https://www.curciodermatology.com/wp-content/uploads/vanderbilt.png',
-        'major'     : 'Mathematics',
-        'relation'  : 'Alumni'
-    },
-    {
-        'first_name': 'Chelsea',
-        'last_name' : 'Spuck',
-        'image'     : 'https://www.curciodermatology.com/wp-content/uploads/vanderbilt.png',
-        'major'     : 'Human Organization and Development',
-        'relation'  : 'Graduate Student'
-    }
-]*/
-
 // Populates webpage with data given in 'results' parameter, which is a list of json objects
 function fillInData(results) {
 
@@ -98,7 +59,7 @@ function createContent(content) {
     // Name
     var name = document.createElement('h5');
     name.setAttribute('class', 'card-title');
-    name.innerHTML = content.first_name + ' ' + content.last_name;
+    name.innerHTML = content['first_name'] + ' ' + content['last_name'];
 
     // Major
     var major = document.createElement('p');
@@ -130,18 +91,3 @@ function createContent(content) {
 console.log("Inside populateWebpage.js");
 
 fillInData(pcbg);
-
-/*let query = "SELECT first_name, last_name, major_or_program, relation FROM pcbg where last_name='James'";
-
-db.query(query, (err, result) => {
-    if (err){s
-        res.redirect('/');
-    }
-    console.log("Reached searchresults.js");
-    console.log(req.params[0]);
-    console.log(result);
-    fillInData(result);
-});*/
-
-// If we follow php server side script path...
-//$.ajax({url: 'query.php', type: 'GET', datatype: 'json', success: fillInData(results)});
