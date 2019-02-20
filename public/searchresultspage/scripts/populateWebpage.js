@@ -1,6 +1,6 @@
 // Populates webpage with data given in 'results' parameter, which is a list of json objects
 function fillInData(results) {
-
+    console.log("Inside populateWebpage.js")
     // Container where each row of results is appended to
     var searchResultContainer = document.querySelector("#resultsContainer");
 
@@ -49,7 +49,7 @@ function createContent(content) {
 
     // Get and format image
     var img = document.createElement('img');
-    img.setAttribute('src', content['image']);
+    img.setAttribute('src', content['pic']);
     img.setAttribute('class', 'card-image card-img-top');
 
     // Create and format div to hold rest of information
@@ -73,6 +73,7 @@ function createContent(content) {
 
     var link = document.createElement('a');
     link.setAttribute('class', 'btn btn-primary');
+    link.setAttribute('href', 'http://localhost:8080/profile$'+(content['uid']-1));
     link.innerHTML = "More";
 
     // Append information (besides image) to the inner div
@@ -87,7 +88,5 @@ function createContent(content) {
 
     return outsideDiv;
 }
-
-console.log("Inside populateWebpage.js");
 
 fillInData(pcbg);
