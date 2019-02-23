@@ -15,22 +15,9 @@
 </head>
 
 <body>
-    <!-- Title Bar -->
-    <div class="container-fluid title-div">
-        <h1 class="site-title">Black Alumni Directory</h1>
-
-        <!-- Page Directory Display -->
-        <nav aria-label="breadcrumb">
-                <ol class="breadcrumb page-extension breadcrumb-div">
-                    <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item"><a href="/about">Search</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Results</li>
-                </ol>
-        </nav>
-
-        <!-- Utility div to ensure everything after is below above items -->
-        <div class="clear-floats"></div>
-    </div>
+    <header>
+        <% include ../partials/header %>
+    </header>
     
     <!-- Search results main body -->
     <div class="results-container">

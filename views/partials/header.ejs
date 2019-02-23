@@ -1,20 +1,94 @@
 <!-- views/partials/header.ejs -->
 
-<nav class="navbar navbar-expand-lg navbar-light topNavBar" role="navigation">
+<!--<nav class="navbar navbar-expand-lg navbar-light topNavBar" role="navigation">
     <a class="navbar-brand" href="https://www.vanderbilt.edu/">
+        <span class="linkStyle linkFont">VANDERBILT</span>
+        <img src="../public/vanderbilt-logo.png" class="titlePic" alt="">
+        <span class="linkStyle linkFont secondTitleDiv">UNIVERSITY</span>
+    </a>-->
+    <!-- Page Directory Display -->
+    <!--<nav aria-label="breadcrumb">
+        <ol class="breadcrumb page-extension breadcrumb-div">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/about">Search</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Results</li>
+        </ol>
+    </nav>
+</nav>-->
+
+<!-- Title Bar -->
+<div class="container-fluid title-div topNavBar">
+    <!--<h1 class="site-title">Black Alumni Directory</h1>-->
+
+    <a class="navbar-brand titleLink" href="https://www.vanderbilt.edu/">
         <span class="linkStyle">VANDERBILT</span>
-        <img src="../public/vanderbilt-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="../public/vanderbilt-logo.png" class="titlePic" alt="">
         <span class="linkStyle">UNIVERSITY</span>
     </a>
-</nav>
+
+    <h3 class="headerStyle">Black Alumni Directory</h3>
+
+    <!-- Page Directory Display -->
+    <nav class="pageStyle" aria-label="breadcrumb">
+            <ol class="breadcrumb page-extension breadcrumb-div">
+                <li class="breadcrumb-item itemStyle"><a href="/">Home</a></li>
+                <li class="breadcrumb-item itemStyle"><a href="/about">Search</a></li>
+                <li class="breadcrumb-item active itemStyle" aria-current="page">Results</li>
+            </ol>
+    </nav>
+
+    <!-- Utility div to ensure everything after is below above items -->
+    <div class="clear-floats"></div>
+</div>
 
 <style>
+    .headerStyle {
+        color: white;
+        margin-left: 40%;
+        margin-top: 1%;
+        font-family: 'Times New Roman', Times, serif
+    }
+
+    ol {
+        margin-right: 0;
+        padding: 0;
+    }
+
     .topNavBar {
         background-color: #222222;
-        height: 65px;
+        height: 100px;
+    }
+
+    .pageStyle {
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        float: right;
+        width: 36.75%;
+    }
+
+    .titleLink {
+        float: left;
+    }
+
+    .itemStyle {
+        float: right;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .titlePic {
+        height: 40px;
+        width: auto;
     }
 
     .linkStyle {
         color: white;
+        font-size: 150%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .secondTitleDiv {
+        margin-left: 15.5%;
     }
 </style>
