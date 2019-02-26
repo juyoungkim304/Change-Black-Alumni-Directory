@@ -16,3 +16,34 @@
 
 .everything{
 }
+
+.vertical-menu {
+    width: 200px;
+    height: 150px;
+    overflow-y: auto;
+}
+
+.vertical-menu a {
+    background-color: white;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+
+    color: black;
+}
+
+#facultyBtn{
+    background-color: #ccc;
+}
+
+#alumniBtn{
+    background: #ccc;
+}
