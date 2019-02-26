@@ -19,14 +19,16 @@ global.db = db;
 
 const {profilePage} = require('./routes/profile.js');
 const {searchPage} = require('./routes/searchresults.js');
+//const {search-landing} = require('./routes/landing.js')
 
 app.set('view engine', 'ejs');
 
 app.use('/public', express.static('public'));
 
+
 app.get('/', function(req, res) {
-    console.log('Reached startpageplaceholder.ejs');
-    res.render('pages/startpageplaceholder'); // placeholder -- should be replaced with our starting page
+    console.log('Reached search-;landing.ejs');
+    res.render('pages/search-landing'); // placeholder -- should be replaced with our starting page
 });
 
 app.get(/^\/profile\$(\d+)/, profilePage);
