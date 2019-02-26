@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src ="search.js" type="text/javascript"></script>
+    <script scr="jquery-2.1.4.js"></script>
     <title>Vanderbilt Black Alumni</title>
     <link rel="stylesheet" type="text/css" href="searchStyle.css">
     <link rel="stylesheet"
@@ -9,7 +11,9 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
           crossorigin="anonymous">
 </head>
-<body>
+<body onload="createNewHeaders()">
+
+
 <div class="everything">
 
     <div class="header">
@@ -27,32 +31,74 @@
          <img id="logo" src="http://news.vanderbilt.edu/files/vu02c.jpg" ><!--src="https://s3.amazonaws.com/vu-www4/brandbar/images/Vanderbilt-mob.png"-->
      </span>
 
-    <div id="searchOptions">
-        <span>Search By: </span>
-        <div class="btn-group" role="group" aria-label="...">
 
-            <button type="button" class="btn btn-default">Name</button>
-            <button type="button" class="btn btn-default">Major</button>
-            <button type="button" class="btn btn-default">Position</button>
-        </div>
-    </div>
+
+
+
+
 
     <form action="/search" method="GET">
+        <h4>Search by First Name</h4>
+        <div id="searchFirstName" class="row">
+        <div class="col-lg-12">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter First Name"
+                       style="">
+                <span class="input-group-btn">
+            <button class="btn btn-default" type="button" style="">Go!</button>
+        </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
 
-        <div id="search2" class="row">
+     <h4>Search by Last Name</h4>
+        <div id="searchLastName" class="row">
             <div class="col-lg-12">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search type 2">
+                    <input type="text" class="form-control" placeholder="Enter Last Name">
                     <span class="input-group-btn">
-            <button class="btn btn-default" type="button">Go!</button>
+            <button class="btn btn-default" type="button" onclick="lnf();">Go!</button>
         </span>
                 </div><!-- /input-group -->
-           </div><!-- /.col-lg-6 -->
-     </div><!-- /.row -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
     </form>
 </div>
 
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h6> Search by department</h6>
+                <div class="vertical-menu" style="margin-bottom: 5%;">
+                    <a href="#" class="active">Human and Organizational Development</a>
+                    <a href="#">Leadership, Policy, and Organizations</a>
+                    <a href="#">Psychology and Human Development</a>
+                    <a href="#">Special Education</a>
+                    <a href="#">Teaching and Learning</a>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+                <h6>Search for faculty</h6>
+                <button id="facultyBtn" type="button" class="btn btn-primary btn-lg">Faculty</button>
+            </div>
+            <div class="col-sm-4">
+                <h6>Search all alumni</h6>
+                <button id="alumniBtn" type="button" class="btn btn-primary btn-lg">Alumni</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="testJs"></div>
 </div> <!-- everything -->
+
+
+<script>
+
+
+</script>
 
 
 </body>
