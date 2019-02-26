@@ -59,7 +59,7 @@ module.exports = {
         // Handles the case where no search criteria provided, resulting in displaying all available
         // results contained in database
         var converted = convertToQuery(searchQueries);
-        var selection = converted === "*" ? converted : "first_name, last_name, major_or_program, relation"; 
+        var selection = converted === "*" ? converted : "first_name, last_name, major_or_program, relation, pic, uid"; 
         var condition = converted === "*" ? "" : " where " + converted;
 
         // Database query command
