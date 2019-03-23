@@ -35,5 +35,7 @@ app.get(/^\/profile\$(\d+)/, profilePage);
 
 app.get(/^\/searchresults=&(.*)/, searchPage);
 
+app.get(/^\/editprofile/, editPage);
+
 app.listen('8080');
 console.log("Listening at 8080...");
