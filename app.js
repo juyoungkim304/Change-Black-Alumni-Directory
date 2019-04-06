@@ -19,6 +19,7 @@ global.db = db;
 
 const {profilePage} = require('./routes/profile.js');
 const {searchPage} = require('./routes/searchresults.js');
+const {editPage, editedPage} = require('./routes/editProfile.js');
 //const {search-landing} = require('./routes/landing.js')
 
 app.set('view engine', 'ejs');
@@ -34,6 +35,10 @@ app.get('/', function(req, res) {
 app.get(/^\/profile\$(\d+)/, profilePage);
 
 app.get(/^\/searchresults=&(.*)/, searchPage);
+
+app.get(/^\/editprofile\$(\d+)/, editPage);
+
+app.post(/^\/editprofile\$(\d+)/, editedPage);
 
 app.listen('8080');
 console.log("Listening at 8080...");
