@@ -28,7 +28,7 @@ app.use('/public', express.static('public'));
 
 app.get('/', function(req, res) {
     console.log('Reached search-;landing.ejs');
-    res.render('pages/search-landing'); // placeholder -- should be replaced with our starting page
+    res.render('pages/search-landing');
 });
 
 app.get(/^\/profile\$(\d+)/, profilePage);
