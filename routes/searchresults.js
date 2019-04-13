@@ -3,6 +3,7 @@ module.exports = {
         console.log("Reached searchresults.js");
 
         // Extract part of url containing search queries that user inputted
+        //var url = decodeURI(req.url);
         var url = decodeURI(req.url);
         var re = /.+&(.+)/;
         searchParams = re.exec(url);
@@ -11,7 +12,7 @@ module.exports = {
         } else {
             searchParams = searchParams[1];
         }
-        console.log(searchParams);
+        console.log("Search Params: " + searchParams);
         
         // Store all the queries in a javascript object, with the criteria-type as the keys and the
         // value for each criteria as the values for each key
@@ -19,7 +20,7 @@ module.exports = {
         if(searchParams !== '') {
             console.log("Entered here");
             var m;
-            var re1 = /(\w+:[\w\s]+)/g;
+            var re1 = /\$(\w+:[\w\s]+)/g;
             do {
                 m = re1.exec(searchParams);
                 if (m) {
