@@ -15,20 +15,27 @@ module.exports = {
         console.log("Search Params: " + searchParams);
         
         // Store all the queries in a javascript object, with the criteria-type as the keys and the
-        // value for each criteria as the values for each key
-        var searchQueries = {};
+        // (possibly multiple) value(s) for each criteria as the values (each in a list) for each key
+        var searchQueries = {
+            'fn':[],
+            'ln':[],
+            'mp':[],
+            'rl':[]
+        };
         if(searchParams !== '') {
             console.log("Entered here");
             var m;
+            // Extract part after '&' and pushes onto corresponding property list in searchQueries
             var re1 = /\$(\w+:[\w\s]+)/g;
             do {
                 m = re1.exec(searchParams);
                 if (m) {
                     param = m[1].split(':');
-                    searchQueries[param[0]] = param[1];
+                    searchQueries[param[0]].push(param[1]);
                 }
             } while (m);
         }
+        console.log("Search Queries:");
         console.log(searchQueries);
 
         // Converts the query object into a string to be utilized in a sql query command
@@ -50,11 +57,14 @@ module.exports = {
                                 return '';
                         }
                     })(q);
-                    queryList.push(p + "=" + "'" + queries[q] + "'");
+                    if(queries[q].length !== 0) {
+                        // Handles multiple values for a certain key
+                        queryList.push(p + "=" + "'" + queries[q].join("' OR " + p + "='") + "'");
+                    }
                 } 
             }
             
-            return queryList.length === 0 ? "*" : queryList.join(" AND ");
+            return queryList.length === 0 ? "*" : '(' + queryList.join(") AND (") + ')';
         }
 
         // Handles the case where no search criteria provided, resulting in displaying all available
