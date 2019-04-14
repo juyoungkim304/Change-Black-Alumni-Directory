@@ -1,24 +1,7 @@
 <!-- views/partials/header.ejs -->
 
-<!--<nav class="navbar navbar-expand-lg navbar-light topNavBar" role="navigation">
-    <a class="navbar-brand" href="https://www.vanderbilt.edu/">
-        <span class="linkStyle linkFont">VANDERBILT</span>
-        <img src="../public/vanderbilt-logo.png" class="titlePic" alt="">
-        <span class="linkStyle linkFont secondTitleDiv">UNIVERSITY</span>
-    </a>-->
-    <!-- Page Directory Display -->
-    <!--<nav aria-label="breadcrumb">
-        <ol class="breadcrumb page-extension breadcrumb-div">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item"><a href="/about">Search</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Results</li>
-        </ol>
-    </nav>
-</nav>-->
-
 <!-- Title Bar -->
 <div class="container-fluid topNavBar">
-    <!--<h1 class="site-title">Black Alumni Directory</h1>-->
 
     <a class="navbar-brand titleLink" href="https://www.vanderbilt.edu/">
         <span class="linkStyle">VANDERBILT</span>
@@ -28,16 +11,14 @@
 
     <div class="pageInnerTitleDiv breadcrumbStyle">
         <h5 class="headerStyle">BLACK ALUMNI DIRECTORY</h3>
-    </div>
-    
+    </div>    
 
     <!-- Page Directory Display -->
     <nav class="pageStyle" aria-label="breadcrumb">
-            <ol class="breadcrumb page-extension breadcrumbStyle">
-                <li class="breadcrumb-item itemStyle"><a href="/">Home</a></li>
-                <li class="breadcrumb-item itemStyle"><a href="/about">Search</a></li>
-                <li class="breadcrumb-item active itemStyle" aria-current="page">Results</li>
-            </ol>
+        <ol class="breadcrumb page-extension breadcrumbStyle">
+            <li class="breadcrumb-item itemStyle" id="home"><a href="http://localhost:8080/">Home</a></li>
+            <li class="breadcrumb-item itemStyle active" id="searchresults"><a href="http://localhost:8080/searchresults=&">Search Results</a></li>
+        </ol>
     </nav>
 
     <!-- Utility div to ensure everything after is below above items -->
