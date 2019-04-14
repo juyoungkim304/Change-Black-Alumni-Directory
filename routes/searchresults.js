@@ -26,7 +26,7 @@ module.exports = {
             console.log("Entered here");
             var m;
             // Extract part after '&' and pushes onto corresponding property list in searchQueries
-            var re1 = /\$(\w+:[\w\s]+)/g;
+            var re1 = /\$(\w+:[\w\s,]+)/g;
             do {
                 m = re1.exec(searchParams);
                 if (m) {
