@@ -1,11 +1,11 @@
-
-
     document.querySelector('#searchBtn').addEventListener("click", function () {
         queryUrl = createModifiedURL();
-        alert(queryUrl);
         window.location.href = queryUrl;
     });
 
+    // Creates the url corresponding to the selections made on the landing page that will be sent to
+    // the searchresults page and be decoded into the right database queries (so see searchresults.js
+    // to better understand what's going on here)
     function createModifiedURL() {
         var queryUrl = "";
         var firstName = document.querySelector('#firstNameInput').value;
@@ -20,9 +20,6 @@
                 departmentsQuery += "$mp:" + departments[i].value;
             }
         }
-
-        console.log(status);
-        console.log(departments);
 
         var statusQuery = "";
         for(let i = 0; i < status.length; i++){
@@ -44,6 +41,8 @@
         if(statusQuery !== ""){
             queryUrl += statusQuery;
         }
-
-        return '/searchresults=&' + queryUrl;
+        // Note, every new criteria is started with '$', hence every new additon to 'queryUrl'
+        // starting with '$'
+        // Search-landing page always goes to page 1, so we hard-code in a 1 before '&'
+        return '/searchresults=1&' + queryUrl;
     }

@@ -9,13 +9,23 @@ function fillInData(results) {
 
     // Store each row to be appended
     var row;
-    var i = 9*(page_num-1);
-    var end = i+8;
-    for(; i < results.length && i < end; i++) {
+
+    // Isolate results corresponding to current page
+    var i = 8*(p_num-1);
+    var end = i+7;
+
+    // Loop through each of the results for current page
+    for(; i < results.length && i <= end; i++) {
         // Each row stores 4 results, so after every 4 elements in 'results' array, we append row to 
         // searchResultsContainer and create a new empty row
         if(i % 4 == 0) {
-            if(i > 0) {
+            // Only insert row if it has already been populated, which is always at the end of the row 
+            // but not at the beginning of a page (since row hasn't been initialized), hence the check 
+            // that i is not a multiple of 8. If, in the future you decide to change number of results
+            // per page, change 8 to that number per page (same with rows, change 4 to number per row).
+            // Then also change above in 'var i = 8*(page_num-1); var end = i+7' the 8 to number per 
+            // page and 7 to number minus 1.
+            if(i % 8 !== 0) {
                 var temp = row;
                 searchResultContainer.insertBefore(temp, pagination);
             }
@@ -89,5 +99,5 @@ function createContent(content) {
 
     return outsideDiv;
 }
-console.log(pcbg);
+
 fillInData(pcbg);

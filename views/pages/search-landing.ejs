@@ -10,22 +10,34 @@
 </head>
 <body>
     <header> <% include ../partials/header %></header>
+
+    <!-- Main body (translucent blue div and everything inside it) -->
     <div class="jumbotron jumbotron-fluid div_background">
         <div class="container inner_jumbotron_div">
             <h1 class="display-4">Peabody College Black Alumni Directory</h1>
             <p class="lead font-weight-normal">You can search for alumni of Peabody College using the given options below.</p>
             <hr class="my-4">
+            
+            <!-- Name inputs line -->
             <div class="form-inline">
                 <input type="text" aria-label="First name" class="form-control" id="firstNameInput" placeholder="First Name" size="40">
                 <input type="text" aria-label="Last name" class="form-control" id="lastNameInput" placeholder="Last Name" size="40">
             </div>
+
+            <!-- Row below name inputs, containing departments (scroll) and status checkbox sections, one per column -->
             <div class="row">
                 <div class="col-md-4 offset-md-2">
+                    <!-- Departments section -->
                     <div class="outer-select-div">
+                        <!-- Header div -->
                         <div class="search-by-div">
                             <span>Department</span>
                         </div>
+                        <!-- Checkbox div. The 'scrollbar-light-blue' class automatically implements the scroll bar. -->
                         <div class="checkbox-div form-elegant scrollbar-light-blue">
+                            <!-- Simply repeat this formatting/pattern (div - input - label) to add/remove departments. -->
+                            <!-- Note: The 'value' property must correspond to department label in database for queries to work properly. -->
+                            <!-- Mess with styles if you're feeling bold. -->
                             <div class="form-check checkbox-outerDiv">
                                 <input class="form-check-input checkbox-input" type="checkbox" value="Human and Organizational Development">
                                 <label class="checkbox-label" for="defaultCheck1">
@@ -141,22 +153,26 @@
                     </div>
                 </div>
                 <div class="col-md-2 offset-md-1">
+                    <!-- Status div -->
                     <div class="outer-select-div1">
+                        <!-- Header div -->
                         <div class="search-by-div">
                             <span class="" id="">Status</span>
                         </div>
+                        <!-- Checkbox div -->
                         <div class="select-div">
+                            <!-- Again, just follow pattern to add/remove options -->
                             <div class="form-check checkbox-outerDiv">
-                                    <input class="form-check-input-status checkbox-input" type="checkbox" value="Faculty">
-                                    <label class="checkbox-label" for="defaultCheck2">
-                                        Faculty
-                                    </label>
-                                </div>
-                                <div class="form-check checkbox-outerDiv">
-                                    <input class="form-check-input-status checkbox-input" type="checkbox" value="Alumni">
-                                    <label class="checkbox-label" for="defaultCheck2">
-                                        Alumni
-                                    </label>
+                                <input class="form-check-input-status checkbox-input" type="checkbox" value="Faculty">
+                                <label class="checkbox-label" for="defaultCheck2">
+                                    Faculty
+                                </label>
+                            </div>
+                            <div class="form-check checkbox-outerDiv">
+                                <input class="form-check-input-status checkbox-input" type="checkbox" value="Alumni">
+                                <label class="checkbox-label" for="defaultCheck2">
+                                    Alumni
+                                </label>
                             </div>
                             <div class="form-check checkbox-outerDiv">
                                 <input class="form-check-input-status checkbox-input" type="checkbox" value="Graduate Student">

@@ -5,14 +5,30 @@ module.exports = {
         // Extract part of url containing search queries that user inputted
         //var url = decodeURI(req.url);
         var url = decodeURI(req.url);
-        var re = /.+&(.+)/;
+
+        // In order for searches to work properly, urls sent to search results page are formatted as follows:
+        //      - start with /searchresults=
+        //      - next put the current page number
+        //      - then, put an ampersand ('&')
+        //      - put all database queries. These each start with '$', then two-letter abbreviation
+        //        for database key (see below for these conversions), then ':', then value desired
+        //        for this criteria. Ex: /searchresults=2&$fn:John$rl:Alumni  --> This indicates that
+        //        we are on page 2, searching for first_name = 'John' and relation = 'Alumni'.
+
+        // Grabs page number and queries (part after ampersand)
+        var re = /.+([0-9]+)&(.+)/;
         searchParams = re.exec(url);
+        var page_number;
+        
         if(searchParams === null) { // Checks whether or not any search criteria was provided
             searchParams = '';
+            re = /[0-9]+/; // If no search params, still need to get page number
+            page_number_matches = re.exec(url);
+            page_number = parseInt(page_number_matches,10);
         } else {
-            searchParams = searchParams[1];
+            page_number = searchParams[1]; // Results from regex are in a array, so need to index
+            searchParams = searchParams[2];
         }
-        console.log("Search Params: " + searchParams);
         
         // Store all the queries in a javascript object, with the criteria-type as the keys and the
         // (possibly multiple) value(s) for each criteria as the values (each in a list) for each key
@@ -22,6 +38,8 @@ module.exports = {
             'mp':[],
             'rl':[]
         };
+
+        // Populate searchQueries with each key-value inside url
         if(searchParams !== '') {
             console.log("Entered here");
             var m;
@@ -35,10 +53,8 @@ module.exports = {
                 }
             } while (m);
         }
-        console.log("Search Queries:");
-        console.log(searchQueries);
 
-        // Converts the query object into a string to be utilized in a sql query command
+        // Converts the query object into a string to be utilized in a sql query command (can see conversions here)
         function convertToQuery(queries) {
             var queryList = [];
             if(Object.keys(queries).length > 0) {
@@ -84,7 +100,7 @@ module.exports = {
 			}
             console.log(result);
             console.log(result.length);
-			res.render('pages/searchresults.ejs',{pcbg: result, page_num: 1});
+			res.render('pages/searchresults.ejs',{pcbg: result, page_num: page_number, search_url: url});
         });
 	}
 }

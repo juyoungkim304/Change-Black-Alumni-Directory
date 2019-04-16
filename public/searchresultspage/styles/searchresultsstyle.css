@@ -84,6 +84,7 @@ div.card-body a.btn {
     color: white;
 }
 
-.disabled-btn {
-    background-color: red;
+.disable {
+    pointer-events: none;
+    cursor: default;
 }
