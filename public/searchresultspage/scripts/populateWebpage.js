@@ -9,9 +9,9 @@ function fillInData(results) {
 
     // Store each row to be appended
     var row;
-
-    for(var i = 0; i < results.length; i++) {
-
+    var i = 9*(page_num-1);
+    var end = i+8;
+    for(; i < results.length && i < end; i++) {
         // Each row stores 4 results, so after every 4 elements in 'results' array, we append row to 
         // searchResultsContainer and create a new empty row
         if(i % 4 == 0) {
@@ -28,6 +28,7 @@ function fillInData(results) {
         rowElement.setAttribute('class', 'col-sm-3');
 
         // Fill this row element
+        console.log(i);
         var element = createContent(results[i]);
         rowElement.appendChild(element);
 
@@ -88,5 +89,5 @@ function createContent(content) {
 
     return outsideDiv;
 }
-
+console.log(pcbg);
 fillInData(pcbg);

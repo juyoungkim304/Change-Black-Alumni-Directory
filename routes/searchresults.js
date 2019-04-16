@@ -83,7 +83,8 @@ module.exports = {
 				res.redirect('/');
 			}
             console.log(result);
-			res.render('pages/searchresults.ejs',{pcbg: result});
+            console.log(result.length);
+			res.render('pages/searchresults.ejs',{pcbg: result, page_num: 1});
         });
 	}
 }

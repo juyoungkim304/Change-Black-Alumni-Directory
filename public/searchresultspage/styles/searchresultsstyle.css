@@ -22,8 +22,8 @@
 .container-div {
     margin-top: 0px;
     padding: 10px;
-    border: 1px solid rgb(224, 229, 229);
-    background-color: white;
+    /*border: 1px solid rgb(224, 229, 229);*/
+    background-color: rgba(106, 146, 235, 0.4);
     margin-bottom: 30px;
 }
 
@@ -75,11 +75,15 @@
 }
 
 .results-container {
-    background-color: #F2F2F2;
-    margin: 30px 0px;
     height: fit-content;
+    background-image: url('https://res.cloudinary.com/abillionveg/image/upload/v1545024443/d057d43aa715836355d70e020e2e897f256b9f95_p7loyt.jpg');
+    background-size: 100% 100%;
 }
 
 div.card-body a.btn {
     color: white;
+}
+
+.disabled-btn {
+    background-color: red;
 }
