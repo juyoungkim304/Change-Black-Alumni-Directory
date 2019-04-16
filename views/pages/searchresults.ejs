@@ -31,7 +31,7 @@
 
         <!-- Page number, need to implement javascript to update when cycling through pages -->
         <div class="page-number-div">
-            <p class="page-number">Page 1 of 3</p>
+            <p class="page-number" id="page-num">Page 1 of 3</p>
         </div>
 
         <!-- Contains each results from search query, populated via javascript in populateWebpage.js -->
@@ -40,17 +40,17 @@
             <!-- Pagination bar, allows user to switch between pages -->
             <div class="page-nav-div" id="pagination">
                 <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li class="page-item">
+                    <ul class="pagination" id="pagination-list">
+                        <li class="page-item" id="previous">
                             <a class="page-link" href="#" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                                 <span class="sr-only">Previous</span>
                             </a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
+                        <!--<li class="page-item p-num"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item p-num"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item p-num"><a class="page-link" href="#">3</a></li>-->
+                        <li class="page-item" id="next">
                             <a class="page-link" href="#" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                                 <span class="sr-only">Next</span>
@@ -62,11 +62,18 @@
         </div>
     </div>
 
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script>
-        var pcbg = <%-JSON.stringify(pcbg)%>;   
+        var page_num = <%-JSON.stringify(page_num)%>;
+        var pcbg = <%-JSON.stringify(pcbg)%>;
+        console.log(pcbg);
     </script>
     <script type="text/javascript" src="/public/searchresultspage/scripts/populateWebpage.js"></script>
+    <script type="text/javascript" src="/public/searchresultspage/scripts/pagination.js"></script>
 </body>

@@ -27,77 +27,82 @@
 
     <hr>
 
-    <div class ="row" id="first-col">
-        <span>
-            <img id = "image" src="<%=pcbg[index].pic%>" height= auto width=auto>
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+        <!--<div class ="row" id="first-col">-->
+                <span>
+                    <img id = "image" src="<%=pcbg[index].pic%>" height= auto width=390%>
 
-        </span>
-    </div>
+                </span>
+            </div>
+        <!--</div>-->
 
-    <div class ="row">
-        <div id ="first-col">
+        <!--<div class ="row">-->
+            <!--<div id ="first-col">-->
+            <div class="col">
+                <form class="needs-validation" novalidate>
+                    <div class = "form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationDefault01">First name</label>
+                            <input type="text" class="form-control" id="validationDefault01"
+                                placeholder="First name" value="<%=pcbg[index].first_name%>"  required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationDefault02">Preferred name</label>
+                            <input type="text" class="form-control" id="validationDefault02"
+                                placeholder="Preferred name" value="<%=pcbg[index].preferred_name%>" required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationDefault03">Last name</label>
+                            <input type="text" class="form-control" id="validationDefault03"
+                                placeholder="Last name" value="<%=pcbg[index].last_name%>" required>
+                        </div>
+                    </div>
 
-            <form class="needs-validation" novalidate>
-                <div class = "form-row">
-                    <div class="col-md-4 mb-3">
-                        <label for="validationDefault01">First name</label>
-                        <input type="text" class="form-control" id="validationDefault01"
-                               placeholder="First name" value="<%=pcbg[index].first_name%>"  required>
+                    <div class= "form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationDefault04">Relation to Vanderbilt</label>
+                            <input type="text" class="form-control" id="validationDefault04"
+                                placeholder="Relation to Vanderbilt" value="<%=pcbg[index].relation%>"  required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationDefault05">Major/Program</label>
+                            <input type="text" class="form-control" id="validationDefault05"
+                                placeholder="Major/Program" value="<%=pcbg[index].major_or_program%>"  required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationDefault06">Location</label>
+                            <input type="text" class="form-control" id="validationDefault06"
+                                placeholder="Location" value="<%=pcbg[index].location%>"  required>
+                        </div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="validationDefault02">Preferred name</label>
-                        <input type="text" class="form-control" id="validationDefault02"
-                               placeholder="Preferred name" value="<%=pcbg[index].preferred_name%>" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="validationDefault03">Last name</label>
-                        <input type="text" class="form-control" id="validationDefault03"
-                               placeholder="Last name" value="<%=pcbg[index].last_name%>" required>
-                    </div>
-                </div>
 
-                <div class= "form-row">
-                    <div class="col-md-4 mb-3">
-                        <label for="validationDefault04">Relation to Vanderbilt</label>
-                        <input type="text" class="form-control" id="validationDefault04"
-                               placeholder="Relation to Vanderbilt" value="<%=pcbg[index].relation%>"  required>
+                    <div class= "form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="validationDefault07">Bio</label>
+                            <input type="text" class="form-control" id="validationDefault07"
+                                placeholder="Biography" value="<%=pcbg[index].bio%>" required>
+                        </div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="validationDefault05">Major/Program</label>
-                        <input type="text" class="form-control" id="validationDefault05"
-                               placeholder="Major/Program" value="<%=pcbg[index].major_or_program%>"  required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="validationDefault06">Location</label>
-                        <input type="text" class="form-control" id="validationDefault06"
-                               placeholder="Location" value="<%=pcbg[index].location%>"  required>
-                    </div>
-                </div>
 
-                <div class= "form-row">
-                    <div class="col-md-12 mb-3">
-                        <label for="validationDefault07">Bio</label>
-                        <input type="text" class="form-control" id="validationDefault07"
-                               placeholder="Biography" value="<%=pcbg[index].bio%>" required>
+                    <div class = "form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault08">Phone Number</label>
+                            <input type="text" class="form-control" id="validationDefault08"
+                                placeholder="Phone Number" value="<%=pcbg[index].phone%>"  required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault09">Email Address</label>
+                            <input type="text" class="form-control" id="validationDefault09"
+                                placeholder="Email Address" value="<%=pcbg[index].email%>" required>
+                        </div>
                     </div>
-                </div>
-
-                <div class = "form-row">
-                    <div class="col-md-6 mb-3">
-                        <label for="validationDefault08">Phone Number</label>
-                        <input type="text" class="form-control" id="validationDefault08"
-                               placeholder="Phone Number" value="<%=pcbg[index].phone%>"  required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="validationDefault09">Email Address</label>
-                        <input type="text" class="form-control" id="validationDefault09"
-                               placeholder="Email Address" value="<%=pcbg[index].email%>" required>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-success float-right">Update Player</button>
-            </form>
+                    <button type="submit" class="btn btn-success float-right">Update</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </div>        
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
