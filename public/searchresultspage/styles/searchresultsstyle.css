@@ -88,3 +88,14 @@ div.card-body a.btn {
     pointer-events: none;
     cursor: default;
 }
+
+.no-results {
+    background-color: white;
+    border: 1px solid #E9ECEF;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.no-results p {
+    margin: 0;
+}

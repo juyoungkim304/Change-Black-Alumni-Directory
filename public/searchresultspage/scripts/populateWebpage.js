@@ -10,6 +10,22 @@ function fillInData(results) {
     // Store each row to be appended
     var row;
 
+    // Handles case where no results are found corresponding to query
+    if(results.length === 0) {
+        row = document.createElement('div');
+        row.setAttribute('class', 'row-div row no-results');
+        var no_results = document.createElement('div');
+        no_results.setAttribute('class', 'container');
+        var p_no_results = document.createElement('p');
+        p_no_results.innerHTML = 'No results were found.';
+        var a_no_results = document.createElement('a');
+        a_no_results.innerHTML = 'Try a new search.';
+        a_no_results.setAttribute('href', 'http://localhost:8080/');
+        no_results.appendChild(p_no_results);
+        no_results.appendChild(a_no_results);
+        row.appendChild(no_results);
+    }
+
     // Isolate results corresponding to current page
     var i = 8*(p_num-1);
     var end = i+7;
@@ -38,14 +54,13 @@ function fillInData(results) {
         rowElement.setAttribute('class', 'col-sm-3');
 
         // Fill this row element
-        console.log(i);
         var element = createContent(results[i]);
         rowElement.appendChild(element);
 
         // Append back to row
         row.appendChild(rowElement);
     }
-
+    
     // Append last row to container
     searchResultContainer.insertBefore(row, pagination);
 }
