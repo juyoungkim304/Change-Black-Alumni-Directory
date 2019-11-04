@@ -1,78 +1,24 @@
 <!-- views/partials/header.ejs -->
 
-<!-- Title Bar -->
-<div class="container-fluid topNavBar">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <span class="navbar-brand"><img src="../public/vanderbilt-logo.png" width="30" height="30" class="d-inline-block align-top" alt="titlePic" style="margin-right: 5px;">Black Alumni Directory</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <a class="navbar-brand titleLink" href="https://www.vanderbilt.edu/">
-        <span class="linkStyle">VANDERBILT</span>
-        <img src="../public/vanderbilt-logo.png" class="titlePic" alt="">
-        <span class="linkStyle">UNIVERSITY</span>
-    </a>
-
-    <div class="pageInnerTitleDiv breadcrumbStyle">
-        <h5 class="headerStyle">BLACK ALUMNI DIRECTORY</h3>
-    </div>    
-
-    <!-- Page Directory Display -->
-    <nav class="pageStyle" aria-label="breadcrumb">
-        <ol class="breadcrumb page-extension breadcrumbStyle">
-            <li class="breadcrumb-item itemStyle" id="home"><a href="http://localhost:8080/">Home</a></li>
-            <li class="breadcrumb-item itemStyle active" id="searchresults"><a href="http://localhost:8080/searchresults=1&">Search Results</a></li>
-        </ol>
-    </nav>
-
-    <!-- Utility div to ensure everything after is below above items -->
-    <div class="clear-floats"></div>
-</div>
-
-<style>
-    .breadcrumbStyle {
-        background-color: #f9e9c0;
-    }
-
-    .pageInnerTitleDiv {
-        border-radius: 7px;
-        padding: 1.25% 0.75% 0.5% 0.75%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        display: flex;
-    }
-
-    .headerStyle {
-        color: black;
-        font-family: 'Times New Roman', Times, serif;
-    }
-
-    .topNavBar {
-        background-color: #222222;
-        height: 100px;
-        display: flex;
-        padding: 1.75%;
-        align-items: center;
-    }
-
-    .pageStyle {
-        position: relative;
-        margin-left: auto;
-        margin-right: 0;
-        margin-top: 1.25%;
-    }
-
-    .itemStyle {
-        float: right;
-        margin-right: 0;
-        padding: 0;
-    }
-
-    .titlePic {
-        height: 40px;
-        width: auto;
-    }
-
-    .linkStyle {
-        color: white;
-        font-size: 150%;
-        font-family: 'Times New Roman', Times, serif;
-    }
-</style>
+  <div class="collapse navbar-collapse" id="navbarsExample04">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.vanderbilt.edu/">Vanderbilt University</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active ">
+        <a class="nav-link" href="http://localhost:8080/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:8080/searchresults=1&">Search Results</a>
+      </li>
+    </ul>
+  </div>
+</nav>
