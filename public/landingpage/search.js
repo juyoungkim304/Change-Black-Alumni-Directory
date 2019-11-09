@@ -10,7 +10,7 @@
         var queryUrl = "";
         var firstName = document.querySelector('#firstNameInput').value;
         var lastName = document.querySelector('#lastNameInput').value;
-        var departments = document.getElementsByClassName("form-check-input");
+        var departments = document.getElementsByClassName("form-check-input-department");
 
         var status = document.getElementsByClassName("form-check-input-status");
 
