@@ -6,7 +6,7 @@ var db = mysql.createConnection({
     host: 'blackalumnidirectory.cxs1kr4seklv.us-east-1.rds.amazonaws.com',
     user: 'badg',
     password: 'blackalumni1',
-    port: '3306'
+    database: 'blackalumni'
 });
 
 db.connect((err) => {
