@@ -1,9 +1,31 @@
-#name{
-	margin-left: 5%;
+#Name {
+	font-family: franklin-gothic-urw,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+	margin-left: 2%;
 	margin-top: 2%;
 }
 
-#first-col{
-	margin-left: 5%;
+#Photo {
+	
+	margin-left: 2%;
 }
+
+#Email {
+	margin-top: 1%;
+	font-family: franklin-gothic-urw,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+}
+
+#Phone {
+	margin-top: 1%;
+	font-family: franklin-gothic-urw,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+}
+
+#Location{
+	margin-top: 1%;
+	font-family: franklin-gothic-urw,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+}
+
+thead {
+	margin-left: 2%;
+}
+
 

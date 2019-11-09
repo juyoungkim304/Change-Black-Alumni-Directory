@@ -2,9 +2,11 @@
 
 	<meta charset="UTF-8">
 
-    	<title>Vanderbilt Black Alumni</title>
+	<title>Vanderbilt Black Alumni</title>
 
-   	<link rel="stylesheet" type="text/css" href="/public/profilepage/styles/profileStyle.css">
+	<link rel="stylesheet" type="text/css" href="/public/profilepage/styles/profileStyle.css">
+	   
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     
     <!-- Bootstrap CSS -->
@@ -14,75 +16,81 @@
 
 </head>
 
-
 <body>
 
 	<header>
-		<% include ../partials/header %>
+			<% include ../partials/header %>
 	</header>
-    
-
-
-    <div id= "first-col" class="row">
-
-	<h1><%=pcbg[index].first_name%> <%=pcbg[index].last_name%> (<%=pcbg[index].preferred_name%>) </h1>
-
-    </div>
-
-
-    <hr>
-
-
-    <div class= "row">
-
-      <div id = "first-col" class= "col-md-4">
-	      
-	<span>
-
-        <img id = "image" src="<%=pcbg[index].pic%>" height= 40% width= auto>
-
-	</span>
-	      
-
-	<h2>Biography</h2>
-
-        <p><%=pcbg[index].bio%></p>
-	      
-
-	<h2>Contact</h2>
-
-	<h3>Phone Number</h3>
-
-	<p><%=pcbg[index].phone%></p>
+			
+	<div id= "Name" class="row">
 	
-	<h3>Email</h3>
+		<h1>
+			<%=pcbg[index].first_name%> <%=pcbg[index].last_name%> (<%=pcbg[index].preferred_name%>)
+		</h1>
+		
+	</div>
 
-	<p><a href= "mailto: <%=pcbg[index].email%>">Click here for email</a></p>
+	<hr>
+
+	<div id = "About">
+		<p>
+			<div id = "Photo" style = "float:left">
+				<img id = "image" src="<%=pcbg[index].pic%>" height = "300" width = "300">
+			</div>
+			<h6>About:</h6>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos optio ducimus debitis eligendi, delectus eum perspiciatis exercitationem tempore quis aperiam natus aspernatur cupiditate cum sapiente distinctio magni aut quae assumenda! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore harum consectetur nesciunt aperiam eum. Qui hic voluptates corporis nulla porro. Repellat officia, sint ipsum similique commodi ipsa! Perspiciatis, magni suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quos aut nihil reprehenderit perferendis quas, placeat omnis, distinctio magni animi veniam temporibus, dolor tempora aliquam nisi quam alias consequatur qui. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex aut, officia perferendis quidem commodi voluptas aliquid veniam fugiat excepturi, quaerat dignissimos eveniet esse quod vitae repellat, totam quae illo in? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laborum incidunt nihil expedita minima perspiciatis alias! Numquam ipsam sint quae! Debitis sit modi non officiis reprehenderit ad eligendi consequuntur vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur rerum modi non corporis in, vero nesciunt ipsa eaque tenetur ab, perspiciatis libero officiis expedita sapiente qui! Veritatis, veniam modi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ullam tempora expedita non minima! Ipsam, accusantium sit. Hic nihil deserunt ipsum distinctio ut, velit numquam amet enim harum eveniet eaque?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor soluta quasi in dolorem rerum dolorum tempore fuga, aliquid numquam provident molestiae tempora perspiciatis.
+		</p>
+	</div>
+			
 
 
-      </div>
-
-        
-
-      <div id = "body" class= "col-md-4">
-
-	      
-	<h3>Relation to Vanderbilt</h3>
-
-	<p><%=pcbg[index].relation%></p>
-
-	<h3>Major/Program</h3>
-
-	<p><%=pcbg[index].major_or_program%></p>
-
-	<h3>Location</h3>
-
-	<p><%=pcbg[index].location%></p>
+	<div id = "Contact Information">
+		<table>
+			<thead>
+			</thead>
 	
+			<tbody>
+				<tr>
+					<div id = "Status">
+						<p><%=pcbg[index].relation%></p>
+					</div>
+				</tr>
+				<tr>
+					<div id = Field>
+						<p><%=pcbg[index].major_or_program%></p>
+					</div>
+				</tr>
+				<tr>
+					<div id = "Email">
+						<a href= "mailto: <%=pcbg[index].email%>">
+							<i class="fa fa-envelope-o"> 
+								<%=pcbg[index].email%>
+							</i>
+						</a>
+					</div>
+				</tr>
+				
+				<tr>
+					<div id = "Phone">
+						<i class="fa fa-phone">
+							<%=pcbg[index].phone%>
+						</i>
+					</div>
+				</tr>
+	
+				<tr>
+					<div id = "Location">
+						<i class="fa fa-map-marker">
+							<%=pcbg[index].location%>
+						</i>
+					</div>
+				</tr>
+	
+			</tbody>
+		</table>
+	</div>
 
-      </div>
 
-   </div>
 
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
