@@ -3,7 +3,7 @@ var app = express();
 var mysql = require('mysql');
 
 var db = mysql.createConnection({
-    host: 'blackalumnidirectory.cosk8ebxjg1j.us-east-1.rds.amazonaws.com',
+    host: 'blackalumnidirectory.cxs1kr4seklv.us-east-1.rds.amazonaws.com',
     user: 'badg',
     password: 'blackalumni1',
     database: 'blackalumni'
