@@ -4,6 +4,7 @@ var mysql = require('mysql');
 
 var db = mysql.createConnection({
     host: 'blackalumnidirectory.cxs1kr4seklv.us-east-1.rds.amazonaws.com',
+    port: '3306',
     user: 'badg',
     password: 'blackalumni1',
     database: 'blackalumni'
@@ -11,6 +12,7 @@ var db = mysql.createConnection({
 
 db.connect((err) => {
     if (err) {
+        console.log(err)
         throw err;
     }
     console.log("Connected to database...");
