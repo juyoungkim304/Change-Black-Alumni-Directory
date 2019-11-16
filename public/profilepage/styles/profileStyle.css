@@ -5,9 +5,22 @@
 }
 
 #Photo {
-	
-	margin-left: 2%;
+	padding-left: 50px;
+	padding-top: 65px;
+
 }
+
+#Biography {
+	padding-top: 30px;
+	padding-right: 100px;
+	padding-left: 400px;
+}
+
+#Contact {
+	padding-left: 50px;
+	padding-bottom: 100px;
+}
+
 
 #Email {
 	margin-top: 1%;

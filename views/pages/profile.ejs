@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body style="background-color:burlywood;">
 
 	<header>
 			<% include ../partials/header %>
@@ -32,19 +32,20 @@
 
 	<hr>
 
-	<div id = "About">
-		<p>
+	<div id = "Info">
 			<div id = "Photo" style = "float:left">
-				<img id = "image" src="<%=pcbg[index].pic%>" height = "300" width = "300">
+				<img id = "image" src= "<%=pcbg[index].pic%>" height = "300" width = 300>
 			</div>
-			<h6>About:</h6>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos optio ducimus debitis eligendi, delectus eum perspiciatis exercitationem tempore quis aperiam natus aspernatur cupiditate cum sapiente distinctio magni aut quae assumenda! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore harum consectetur nesciunt aperiam eum. Qui hic voluptates corporis nulla porro. Repellat officia, sint ipsum similique commodi ipsa! Perspiciatis, magni suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quos aut nihil reprehenderit perferendis quas, placeat omnis, distinctio magni animi veniam temporibus, dolor tempora aliquam nisi quam alias consequatur qui. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex aut, officia perferendis quidem commodi voluptas aliquid veniam fugiat excepturi, quaerat dignissimos eveniet esse quod vitae repellat, totam quae illo in? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laborum incidunt nihil expedita minima perspiciatis alias! Numquam ipsam sint quae! Debitis sit modi non officiis reprehenderit ad eligendi consequuntur vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur rerum modi non corporis in, vero nesciunt ipsa eaque tenetur ab, perspiciatis libero officiis expedita sapiente qui! Veritatis, veniam modi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ullam tempora expedita non minima! Ipsam, accusantium sit. Hic nihil deserunt ipsum distinctio ut, velit numquam amet enim harum eveniet eaque?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor soluta quasi in dolorem rerum dolorum tempore fuga, aliquid numquam provident molestiae tempora perspiciatis.
-		</p>
+
+			<div id = "Biography">
+				<h6>About:</h6>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos optio ducimus debitis eligendi, delectus eum perspiciatis exercitationem tempore quis aperiam natus aspernatur cupiditate cum sapiente distinctio magni aut quae assumenda! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore harum consectetur nesciunt aperiam eum. Qui hic voluptates corporis nulla porro. Repellat officia, sint ipsum similique commodi ipsa! Perspiciatis, magni suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quos aut nihil reprehenderit perferendis quas, placeat omnis, distinctio magni animi veniam temporibus, dolor tempora aliquam nisi quam alias consequatur qui. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex aut, officia perferendis quidem commodi voluptas aliquid veniam fugiat excepturi, quaerat dignissimos eveniet esse quod vitae repellat, totam quae illo in? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laborum incidunt nihil expedita minima perspiciatis alias! Numquam ipsam sint quae! Debitis sit modi non officiis reprehenderit ad eligendi consequuntur vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur rerum modi non corporis in, vero nesciunt ipsa eaque tenetur ab, perspiciatis libero officiis expedita sapiente qui! Veritatis, veniam modi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ullam tempora expedita non minima! Ipsam, accusantium sit. Hic nihil deserunt ipsum distinctio ut, velit numquam amet enim harum eveniet eaque?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor soluta quasi in dolorem rerum dolorum tempore fuga, aliquid numquam provident molestiae tempora perspiciatis.
+			</div>
 	</div>
 			
 
 
-	<div id = "Contact Information">
+	<div id = "Contact">
 		<table>
 			<thead>
 			</thead>
@@ -56,7 +57,7 @@
 					</div>
 				</tr>
 				<tr>
-					<div id = Field>
+					<div id = "Field">
 						<p><%=pcbg[index].major_or_program%></p>
 					</div>
 				</tr>
