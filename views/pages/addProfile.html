@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add New Profile Form</title>
+    <link rel="stylesheet" type="text/css" href="addProfileStyle.css">
+
+</head>
+<body>
+    <!-- replace results.html with whatever file we are storing data in -->
+    <form action="results.html" method="POST"> 
+
+        <h1>Add Profile</h1>
+
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Phone">
+        <input type="text" placeholder="Location">
+        <input type="text" placeholder="Field">
+
+        <p>
+            <select id = "myList">
+                <option value = "1">Select Status</option>
+                <option value = "2">Alumni</option>
+                <option value = "3">Grad Student</option>
+                <option value = "4">Faculty</option>
+            </select>
+        </p>
+
+        <div>
+            <textarea maxlength="2000" name="Biography" id="Biography" cols="30" rows="5xs">Enter Biography Here (Maximum 2000 Characters)
+            </textarea>
+        </div>
+
+        <div>
+            <label>Upload Photo</label>
+            <input type="file" name="pic" accept="image/*">
+        </div>
+
+        <input type="submit" name="Submit">
+
+    </form>
+</body>
+</html>
