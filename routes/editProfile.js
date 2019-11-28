@@ -12,7 +12,8 @@ module.exports = {
     },
 
     editedPage: (req, res) => {
-        let index = req.params[0];
+        //REQUIRES body-parser npm plugin
+        let index = parseInt(req.params[0], 10) + 1;
         let first_name = req.body.first_name;
         let last_name = req.body.last_name;
         let preferred_name = req.body.preferred_name;
@@ -23,17 +24,17 @@ module.exports = {
         let phone = req.body.phone;
         let email = req.body.email;
 
-        var fields = [first_name, last_name, preferred_name, bio, relation, major_or_program, location, phone, email]
+        var fields = [first_name, last_name, preferred_name, bio, relation, major_or_program, location, phone, email, index]
 
         let query = "UPDATE pcbg SET first_name = ?, last_name = ?, preferred_name = ?, bio = ?, relation = ?, major_or_program = ?, location = ?, phone = ?, email = ? WHERE uid = ?";
 
-        db.query(query, fields, index, (err, result) => {
+        db.query(query, fields, (err, result) => {
 
             if (err){
                 res.redirect('/');
             }
-            console.log("Edited editProfile.js");
-            res.redirect('/^\/profile\$(\d+)/');
+            console.log("Updated profile with uid " + index);
+            res.redirect('/profile$' + req.params[0]);
         });
     }
 }
