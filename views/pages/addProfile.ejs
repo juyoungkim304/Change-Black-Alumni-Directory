@@ -1,0 +1,64 @@
+<head>
+
+	<meta charset="UTF-8">
+
+    	<title>Vanderbilt Black Alumni</title>
+
+   	<link rel="stylesheet" type="text/css" href="/public/profilepage/styles/profileStyle.css">
+
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+        crossorigin="anonymous">
+
+
+</head>
+
+<body>
+  <header>
+      <% include ../partials/header %>
+  </header>
+  <div class="container">
+    <% if (message != '') { %>
+        <p class="text-center text-danger"><%= message %></p>
+    <% } %>
+    <form class="add-profile-form" action="" method="post" enctype="multipart/form-data">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="first_name" id="first-name" placeholder="First Name" required>
+            </div>
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" name="preferred_name" id="preferred_name" placeholder="Preferred Name" required>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="last_name" id="last-name" placeholder="Last Name" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="relation" id="relation" placeholder="Relation to Vanderbilt" required>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="major" id="major" placeholder="Major/Program" required>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="location" id="location" placeholder="Location" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="bio" id="bio" placeholder="Biography" required>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="phone_number" id="phone_number" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="email" id="email" placeholder="Email Address" required>
+            </div>
+        </div>
+      <button type="submit" class="btn btn-primary float-right">Add</button>
+        </form>
+    </div>
+</div>
+</body>
+
