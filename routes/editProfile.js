@@ -24,14 +24,15 @@ module.exports = {
         let phone = req.body.phone;
         let email = req.body.email;
 
-        var fields = [first_name, last_name, preferred_name, bio, relation, major_or_program, location, phone, email, index]
+        var fields = [first_name, last_name, preferred_name, relation, major_or_program, location, phone, email, index]
 
-        let query = "UPDATE pcbg SET first_name = ?, last_name = ?, preferred_name = ?, bio = ?, relation = ?, major_or_program = ?, location = ?, phone = ?, email = ? WHERE uid = ?";
+        let query = "UPDATE pcbg SET first_name = ?, last_name = ?, preferred_name = ?, relation = ?, major_or_program = ?, location = ?, phone = ?, email = ? WHERE uid = ?";
 
-        db.query(query, fields, (err, result) => {
-
+        db.query(query, fields, (err) => {
             if (err){
+              console.log(err);
                 res.redirect('/');
+                return;
             }
             console.log("Updated profile with uid " + index);
             res.redirect('/profile$' + req.params[0]);
