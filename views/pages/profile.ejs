@@ -1,102 +1,60 @@
 <head>
-
-	<meta charset="UTF-8">
-
-	<title>Vanderbilt Black Alumni</title>
-
-	<link rel="stylesheet" type="text/css" href="/public/profilepage/styles/profileStyle.css">
-	   
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
-        crossorigin="anonymous">
-
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+    <link rel="stylesheet" href="../../public/profilepage/styles/profileStyle.css">
+    <link rel="stylesgeet" href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css">
 </head>
 
-<body style="background-color:burlywood;">
+<body class="profile-page">
+    
 
-	<header>
-			<% include ../partials/header %>
+    <header>
+		<% include ../partials/header %>
 	</header>
-			
-	<div id= "Name" class="row">
-	
-		<h1>
-			<%=pcbg[index].first_name%> <%=pcbg[index].last_name%> (<%=pcbg[index].preferred_name%>)
-		</h1>
-		
+    <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
+    <div class="main main-raised">
+		<div class="profile-content">
+            <div class="container">
+                <div class="row">
+	                <div class="col-md-6 ml-auto mr-auto">
+        	           <div class="profile">
+	                        <div class="avatar">
+	                            <img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTU0NjQzOTk4OTQ4OTkyMzQy/ansel-elgort-poses-for-a-portrait-during-the-baby-driver-premiere-2017-sxsw-conference-and-festivals-on-march-11-2017-in-austin-texas-photo-by-matt-winkelmeyer_getty-imagesfor-sxsw-square.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+	                        </div>
+	                        <div class="name">
+
+                                <h3 class="title"><%=pcbg[index].first_name%> <%=pcbg[index].last_name%> (<%=pcbg[index].preferred_name%>)</h3>
+                                
+                                <h6><%=pcbg[index].relation%> - <%=pcbg[index].major_or_program%> — <%=pcbg[index].location%></h6>
+                                
+                                <a href= "tel:<%=pcbg[index].phone%>" class="btn btn-just-icon btn-link btn-phone"><i class="fa fa-phone"></i></a>
+                                <a href= "mailto: <%=pcbg[index].email%>" class="btn btn-just-icon btn-link btn-email"><i class="fa fa-envelope-o"></i></a>
+
+	                        </div>
+	                    </div>
+    	            </div>
+                </div>
+                <div class="description text-center">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem error delectus accusamus beatae ad expedita officiis vel hic laudantium voluptas doloribus, facere et perspiciatis odit magni molestiae veritatis ab vitae.</p>
+                </div>
+				<div class="row">
+					<div class="col-md-6 ml-auto mr-auto">
+    	    	</div>
+            </div>
+
+        
+            </div>
+        </div>
 	</div>
-
-	<hr>
-
-	<div id = "Info">
-			<div id = "Photo" style = "float:left">
-				<img id = "image" src= "<%=pcbg[index].pic%>" height = "300" width = 300>
-			</div>
-
-			<div id = "Biography">
-				<h6>About:</h6>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos optio ducimus debitis eligendi, delectus eum perspiciatis exercitationem tempore quis aperiam natus aspernatur cupiditate cum sapiente distinctio magni aut quae assumenda! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore harum consectetur nesciunt aperiam eum. Qui hic voluptates corporis nulla porro. Repellat officia, sint ipsum similique commodi ipsa! Perspiciatis, magni suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quos aut nihil reprehenderit perferendis quas, placeat omnis, distinctio magni animi veniam temporibus, dolor tempora aliquam nisi quam alias consequatur qui. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex aut, officia perferendis quidem commodi voluptas aliquid veniam fugiat excepturi, quaerat dignissimos eveniet esse quod vitae repellat, totam quae illo in? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laborum incidunt nihil expedita minima perspiciatis alias! Numquam ipsam sint quae! Debitis sit modi non officiis reprehenderit ad eligendi consequuntur vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur rerum modi non corporis in, vero nesciunt ipsa eaque tenetur ab, perspiciatis libero officiis expedita sapiente qui! Veritatis, veniam modi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ullam tempora expedita non minima! Ipsam, accusantium sit. Hic nihil deserunt ipsum distinctio ut, velit numquam amet enim harum eveniet eaque?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor soluta quasi in dolorem rerum dolorum tempore fuga, aliquid numquam provident molestiae tempora perspiciatis.
-			</div>
-	</div>
-			
+  
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
 
 
-	<div id = "Contact">
-		<table>
-			<thead>
-			</thead>
-	
-			<tbody>
-				<tr>
-					<div id = "Status">
-						<p><%=pcbg[index].relation%></p>
-					</div>
-				</tr>
-				<tr>
-					<div id = "Field">
-						<p><%=pcbg[index].major_or_program%></p>
-					</div>
-				</tr>
-				<tr>
-					<div id = "Email">
-						<a href= "mailto: <%=pcbg[index].email%>">
-							<i class="fa fa-envelope-o"> 
-								<%=pcbg[index].email%>
-							</i>
-						</a>
-					</div>
-				</tr>
-				
-				<tr>
-					<div id = "Phone">
-						<i class="fa fa-phone">
-							<%=pcbg[index].phone%>
-						</i>
-					</div>
-				</tr>
-	
-				<tr>
-					<div id = "Location">
-						<i class="fa fa-map-marker">
-							<%=pcbg[index].location%>
-						</i>
-					</div>
-				</tr>
-	
-			</tbody>
-		</table>
-	</div>
+   
 
-
-
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
-
-</html>
-
