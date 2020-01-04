@@ -40,7 +40,7 @@ app.get(/^\/searchresults=([0-9]+)&(.*)/, searchPage);
 
 app.get(/^\/addprofile/, addProfile);
 
-app.post(/^\/addProfile/, addedProfile);
+app.post(/^\/addprofile/, addedProfile);
 
 app.get(/^\/editprofile\$(\d+)/, editPage);
 
