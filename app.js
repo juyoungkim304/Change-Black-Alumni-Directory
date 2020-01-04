@@ -47,7 +47,7 @@ app.post(/^\/editprofile\$(\d+)/, editedPage);
 
 app.get(/^\/addprofile/, addProfile);
 
-app.post(/^\/addProfile/, addedProfile);
+app.post(/^\/addprofile/, addedProfile);
 
 app.listen('8080');
 console.log("Listening at 8080...");
