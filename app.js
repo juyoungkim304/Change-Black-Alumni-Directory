@@ -22,7 +22,7 @@ global.db = db;
 const {profilePage} = require('./routes/profile.js');
 const {searchPage} = require('./routes/searchresults.js');
 const {editPage, editedPage} = require('./routes/editProfile.js');
-const {addProfilePage} = require('./routes/addProfile.js');
+const {addProfile, addedProfile} = require('./routes/addProfile.js');
 
 
 app.set('view engine', 'ejs');
@@ -43,7 +43,11 @@ app.get(/^\/editprofile\$(\d+)/, editPage);
 
 app.post(/^\/editprofile\$(\d+)/, editedPage);
 
-app.get(/^\/addProfile\$(\d+)/, addProfilePage);
+// app.get(/^\/addProfile\$(\d+)/, addProfilePage);
+
+app.get(/^\/addprofile/, addProfile);
+
+app.post(/^\/addProfile/, addedProfile);
 
 app.listen('8080');
 console.log("Listening at 8080...");

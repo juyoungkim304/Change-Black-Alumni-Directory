@@ -1,5 +1,5 @@
 module.exports = {
-  addPage: (req, res) => {
+    addProfile: (req, res) => {
       let query = "SELECT * FROM pcbg";
 
       db.query(query, (err, result) => {
@@ -11,7 +11,7 @@ module.exports = {
       });
   },
 
-  addedPage: (req, res) => {
+  addedProfile: (req, res) => {
       //let index = req.params[0];
       //let first_name = req.body.first_name;
       //let last_name = req.body.last_name;
@@ -22,7 +22,6 @@ module.exports = {
         return res.status(400).send("No files were uploaded.");
       }
 
-      let message = '';
       let first_name = req.body.first_name;
       let preferred_name = req.body.preferred_name;
       let last_name = req.body.last_name;
@@ -32,6 +31,10 @@ module.exports = {
       let bio = req.body.bio;
       let phone_number = req.body.phone_number;
       let email = req.body.email;
+      let pic = "";
+
+      let query = "INSERT INTO pcbg VALUES first_name = ?, preferred_name = ?, last_name = ?, relation = ?, major = ?, location = ?, bio = ?, phone_number = ?, email = ?, pic = ?";
+
 
       db.query(query, (err, result) => {
           if (err){
@@ -40,5 +43,6 @@ module.exports = {
           console.log("Edited addProfile.js");
           res.redirect('/');
       });
+      res.render('pages/addProfile.ejs');
   }
 }
