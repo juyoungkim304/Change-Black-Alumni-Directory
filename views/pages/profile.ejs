@@ -31,23 +31,33 @@
                                 
                                 <a href= "tel:<%=pcbg[index].phone%>" class="btn btn-just-icon btn-link btn-phone"><i class="fa fa-phone"></i></a>
                                 <a href= "mailto: <%=pcbg[index].email%>" class="btn btn-just-icon btn-link btn-email"><i class="fa fa-envelope-o"></i></a>
+                                <a href= "<%=pcbg[index].external_link%>" class="btn btn-just-icon btn-link btn-email"><i class="fa fa-link"></i></a>
 
 	                        </div>
 	                    </div>
     	            </div>
                 </div>
+                
                 <div class="description text-center">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem error delectus accusamus beatae ad expedita officiis vel hic laudantium voluptas doloribus, facere et perspiciatis odit magni molestiae veritatis ab vitae.</p>
+                    <p><%=pcbg[index].occupation%></p>
+                    <a class="btn btn-success" href="/editprofile$<%=pcbg[index].uid-1%>">Edit</a>
+
                 </div>
+
 				<div class="row">
 					<div class="col-md-6 ml-auto mr-auto">
-    	    	</div>
+                </div>
+                
+                
+                
             </div>
 
         
             </div>
         </div>
-	</div>
+    </div>
+    
+
   
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

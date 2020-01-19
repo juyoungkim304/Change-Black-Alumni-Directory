@@ -150,3 +150,7 @@ img.rounded {
     background-color: transparent;
     color: #999;
 }
+
+.btn btn-success{
+    text-align: center;
+}
