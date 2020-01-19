@@ -5,15 +5,7 @@ module.exports = {
     },
 
     addedProfile: (req, res) => {
-        /*let uid_query = "SELECT MAX(uid) FROM pcbg";
-        db.query(uid_query, (err, uidresult) => {
 
-            if (err){
-                res.redirect('/');
-            }
-            console.log(uidresult);*/
-
-        let uid = 11;
         let first_name = req.body.first_name;
         let last_name = req.body.last_name;
         let preferred_name = req.body.preferred_name;
@@ -26,9 +18,9 @@ module.exports = {
         let pic = ""
         let external_link = ""
 
-        var fields = [uid, first_name, last_name, preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link]
+        var fields = [first_name, last_name, preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link]
 
-        let query = "INSERT INTO pcbg (uid, first_name, last_name, preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        let query = "INSERT INTO pcbg (first_name, last_name, preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         db.query(query, fields, (error) => {
 
@@ -37,7 +29,7 @@ module.exports = {
                 console.log(error);
             }
             console.log("Added profile");
-            res.redirect();
+            res.redirect('/');
         });
 
         //res.render('pages/addProfile.ejs');

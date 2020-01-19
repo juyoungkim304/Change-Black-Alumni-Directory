@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 var mysql = require('mysql');
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
 
 var db = mysql.createConnection({
     host: 'blackalumnidirectory.cxs1kr4seklv.us-east-1.rds.amazonaws.com',
