@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/public/main.css">
     <link rel="stylesheet" type="text/css" href="/public/searchresultspage/styles/searchresultsstyle.css">
 
     <title>Search Results - Black Alumni Directory</title>
@@ -20,14 +21,14 @@
     </header>
 
     <!-- Search results main body -->
-    <div class="results-container">
+    <div class="jumbotron jumbotron-fluid div-background">
+      <div class="container jumbotron-text">
+        <h1 class="display-4">Search Results</h1>
+        <p class="lead">Page <%=page_num%> of <span id="total-page-num"></span></p>
+      </div>
+    </div>
 
-        <!-- Title -->
-        <div class="outside-header-div">
-            <div class="header-div">
-                <h1 class="search-header">Search Results</h1>
-            </div>
-        </div>
+    <div class="results-container">
 
         <!-- Page number, need to implement javascript to update when cycling through pages -->
         <div class="page-number-div">
@@ -35,7 +36,7 @@
                  The first number (page number) is determined server-side while the total number of
                  pages is found on the client side. There needs to be more consistency in the purpose
                  and functionality of various components. BUT, it does work... -->
-            <p class="page-number">Page <%=page_num%> of <span id="total-page-num"></span></p>
+
         </div>
 
         <!-- Contains each results from search query, populated via javascript in populateWebpage.js -->
