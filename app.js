@@ -32,6 +32,7 @@ const {searchPage} = require('./routes/searchresults.js');
 // const {editPage, editedPage} = require('./routes/editProfile.js');
 // const {addProfile, addedProfile} = require('./routes/addProfile.js');
 const {deletePage} = require('./routes/deleteProfile.js');
+const {markPage} = require('./routes/markProfile.js');
 
 
 app.set('view engine', 'ejs');
@@ -55,6 +56,8 @@ app.get(/^\/searchresults=([0-9]+)&(.*)/, searchPage);
 // var deletePage = express.Router().delete;
 
 app.get(/^\/deleteprofile\$(\d+)/, deletePage);
+
+app.get(/^\/markprofile\$(\d+)/, markPage);
 
 // app.post(/^\/deleteprofile\$(\d+)/, deletedPage);
 
