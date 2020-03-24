@@ -20,17 +20,17 @@
                 <div class="col-md-6 ml-auto mr-auto">
                     <div class="profile">
                         <div class="avatar">
-                            <img src="<%=pcbg[index].pic%>" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                            <img src="<%=pcbg[0].pic%>" alt="Circle Image" class="img-raised rounded-circle img-fluid">
                         </div>
                         <div class="name">
 
-                            <h3 class="title"><%=pcbg[index].first_name%> <%=pcbg[index].last_name%> (<%=pcbg[index].preferred_name%>)</h3>
+                            <h3 class="title"><%=pcbg[0].first_name%> <%=pcbg[0].last_name%> (<%=pcbg[0].preferred_name%>)</h3>
 
-                            <h6><%=pcbg[index].relation%> - <%=pcbg[index].major_or_program%> — <%=pcbg[index].location%></h6>
+                            <h6><%=pcbg[0].relation%> - <%=pcbg[0].major_or_program%> — <%=pcbg[0].location%></h6>
 
-                            <a href= "tel:<%=pcbg[index].phone%>" class="btn btn-just-icon btn-link btn-phone"><i class="fa fa-phone"></i></a>
-                            <a href= "mailto: <%=pcbg[index].email%>" class="btn btn-just-icon btn-link btn-email"><i class="fa fa-envelope-o"></i></a>
-                            <a href= "<%=pcbg[index].external_link%>" class="btn btn-just-icon btn-link btn-email"><i class="fa fa-link"></i></a>
+                            <a href= "tel:<%=pcbg[0].phone%>" class="btn btn-just-icon btn-link btn-phone"><i class="fa fa-phone"></i></a>
+                            <a href= "mailto: <%=pcbg[0].email%>" class="btn btn-just-icon btn-link btn-email"><i class="fa fa-envelope-o"></i></a>
+                            <a href= "<%=pcbg[0].external_link%>" class="btn btn-just-icon btn-link btn-email"><i class="fa fa-link"></i></a>
 
                         </div>
                     </div>
@@ -38,8 +38,8 @@
             </div>
 <div class="row">
             <div class="description text-center">
-                <p><%=pcbg[index].occupation%></p>
-                <a class="btn btn-success" href="/editprofile$<%=pcbg[index].uid-1%>">Edit</a>
+                <p><%=pcbg[0].occupation%></p>
+                <a class="btn btn-success" href="/editprofile$<%=pcbg[0].uid-1%>">Edit</a>
             </div>
             </div>
         </div>
