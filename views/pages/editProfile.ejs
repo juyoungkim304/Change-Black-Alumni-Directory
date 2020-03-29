@@ -46,7 +46,10 @@
                 <input type="file" name="file" id="fileName" required>
               </div>
               <div class="col-md-6 mb-3">
-                <button onclick="getFileName()" type="submit" class="btn btn-success float-right">Upload image</button>
+                <button onclick="getFileName()" type="submit" class="btn btn-success float-right">Confirm Image</button>
+              </div>
+              <div class="form-row float-right">
+              <p>*note: you must press confirm to update the image</p>
               </div>
           </form>
         </div>
@@ -84,18 +87,15 @@
           </div>
 
           <div class="form-row">
-            <div class="col-md-12 mb-3">
-              <label for="validationDefault07">Bio</label>
-              <input type="text" class="form-control" id="validationDefault07" placeholder="Biography" name="bio" value="<%=pcbg[index].bio%>" required>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-4 mb-3">
               <label for="validationDefault08">Phone Number</label>
               <input type="text" class="form-control" id="validationDefault08" placeholder="Phone Number" name="phone" value="<%=pcbg[index].phone%>" required>
             </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-md-4 mb-3">
+              <label for="validationDefault08">External Link</label>
+              <input type="text" class="form-control" id="validationDefault08" placeholder="External Link" name="external_link" value="<%=pcbg[index].external_link%>" required>
+            </div>
+            <div class="col-md-4 mb-3">
               <label for="validationDefault09">Email Address</label>
               <input type="text" class="form-control" id="validationDefault09" placeholder="Email Address" name="email" value="<%=pcbg[index].email%>" required>
               <div class="description text-center">
