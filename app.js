@@ -25,6 +25,7 @@ const {profilePage} = require('./routes/profile.js');
 const {searchPage} = require('./routes/searchresults.js');
 const {editPage, editedPage} = require('./routes/editProfile.js');
 const {addProfile, addedProfile} = require('./routes/addProfile.js');
+const {deletePage} = require('./routes/deleteProfile.js');
 
 app.set('view engine', 'ejs');
 
@@ -47,6 +48,8 @@ app.post(/^\/addprofile/, addedProfile);
 app.get(/^\/editprofile\$(\d+)/, editPage);
 
 app.post(/^\/editprofile\$(\d+)/, editedPage);
+
+app.get(/^\/deleteprofile\$(\d+)/, deletePage);
 
 app.listen('8080');
 console.log("Listening at 8080...");
