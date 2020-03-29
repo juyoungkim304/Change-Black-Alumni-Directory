@@ -21,14 +21,15 @@ module.exports = {
     let relation = req.body.relation;
     let major_or_program = req.body.major_or_program;
     let location = req.body.location;
+    let occupation = req.body.occupation;
     let phone = req.body.phone;
     let email = req.body.email;
     let external_link = req.body.external_link;
-    let pic = 'http://changedirectory.s3.amazonaws.com/' + req.body.file_name;
+    let pic = req.body.file_name;
 
-    var fields = [first_name, last_name, preferred_name, relation, major_or_program, location, phone, email, pic, external_link, index];
+    var fields = [first_name, last_name, preferred_name, relation, major_or_program, location, occupation, phone, email, pic, external_link, index];
 
-    let query = "UPDATE pcbg SET first_name = ?, last_name = ?, preferred_name = ?, relation = ?, major_or_program = ?, location = ?, phone = ?, email = ?, pic = ?, external_link = ? WHERE uid = ?";
+    let query = "UPDATE pcbg SET first_name = ?, last_name = ?, preferred_name = ?, relation = ?, major_or_program = ?, location = ?, occupation = ?, phone = ?, email = ?, pic = ?, external_link = ? WHERE uid = ?";
 
     db.query(query, fields, (err) => {
       if (err) {
