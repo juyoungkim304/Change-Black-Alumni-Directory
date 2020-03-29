@@ -24,6 +24,7 @@ global.db = db;
 const {profilePage} = require('./routes/profile.js');
 const {searchPage} = require('./routes/searchresults.js');
 const {editPage, editedPage} = require('./routes/editProfile.js');
+const {addProfile, addedProfile} = require('./routes/addProfile.js');
 
 app.set('view engine', 'ejs');
 
@@ -38,6 +39,10 @@ app.get('/', function(req, res) {
 app.get(/^\/profile\$(\d+)/, profilePage);
 
 app.get(/^\/searchresults=([0-9]+)&(.*)/, searchPage);
+
+app.get(/^\/addprofile/, addProfile);
+
+app.post(/^\/addprofile/, addedProfile);
 
 app.get(/^\/editprofile\$(\d+)/, editPage);
 
