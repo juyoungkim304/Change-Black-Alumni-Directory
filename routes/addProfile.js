@@ -15,7 +15,7 @@ module.exports = {
         let location = req.body.location;
         let phone = req.body.phone;
         let email = req.body.email;
-        let pic = ""
+        let pic = 'http://changedirectory.s3.amazonaws.com/' + req.body.file_name;
         let external_link = ""
 
         var fields = [first_name, last_name, preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link]
@@ -34,6 +34,6 @@ module.exports = {
 
         //res.render('pages/addProfile.ejs');
 
-    //});
+        //});
     }
 }

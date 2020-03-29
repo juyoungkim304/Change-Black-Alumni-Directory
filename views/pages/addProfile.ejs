@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <script>
+        var fileName;
+        function getFileName() {
+            fileName = document.getElementById('fileName').files[0].name;
+            document.getElementById('fileValue').value = fileName;
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,6 +26,7 @@
         </div>
         <div class="row clearfix">
             <div class="">
+
 
                 <form action="/addprofile" method="post" class="needs-validation" novalidate>
                     <div class="row clearfix">
@@ -90,8 +100,28 @@
                         </select>
                     </div>
 
+                    <div class="input_field form_control">
+
+                        <input type="hidden" class="form-control" id="fileValue" name="file_name">
+                    </div>
+
+
                     <button type="submit" class="btn btn-success float-right">Add Profile</button>
                 </form>
+
+                <div class="photoUpload">
+                    <form action="http://changedirectory.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+                        <div class="col_half">
+                            <div class="input_field form_control">
+                                <input type="hidden" name="key" value="${filename}">
+                                <input type="file" name="file" id="fileName" required>
+                            </div>
+                            <div class="input_field form_control">
+                                <button onclick="getFileName()" type="submit" class="btn btn-success float-right">Upload Photo</button>
+                            </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>
