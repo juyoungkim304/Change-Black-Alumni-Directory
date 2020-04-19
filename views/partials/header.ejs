@@ -19,9 +19,21 @@
       <li class="nav-item">
         <a class="nav-link" href="http://localhost:8080/searchresults=1&">Search Results</a>
       </li>
+      <%if(!locals.user) {%>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:8080/login">Log In</a>
+      </li>
+      <%}%>
+      <%if(locals.user) {%>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:8080/logout">Log Out</a>
+      </li>
+      <%}%>
+      <%if(locals.user) {%>
       <li class="nav-item">
         <a class="nav-link" href="http://localhost:8080/addprofile">Add Profile</a>
       </li>
+      <%}%>
     </ul>
   </div>
 </nav>

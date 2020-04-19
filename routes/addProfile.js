@@ -1,9 +1,7 @@
 module.exports = {
     addProfile: (req, res) => {
         res.render('pages/addProfile.ejs');
-
     },
-
     addedProfile: (req, res) => {
 
         let first_name = req.body.first_name;
