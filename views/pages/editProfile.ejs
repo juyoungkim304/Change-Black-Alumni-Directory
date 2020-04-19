@@ -10,9 +10,10 @@
   var fileName;
 
   function getFileName() {
-    fileName = document.getElementById('fileName').files[0].name;
+    fileName = 'http://changedirectory.s3.amazonaws.com/' + document.getElementById('fileName').files[0].name;
     document.getElementById('fileValue').value = fileName;
   }
+
 </script>
 
 <header>
@@ -56,7 +57,7 @@
 
         <form action="/editprofile$<%=pcbg[index].uid-1%>" method="post" class="needs-validation" novalidate>
           <div class="form-row">
-            <input type="hidden" class="form-control" id="fileValue" name="file_name">
+            <input type="hidden" class="form-control" id="fileValue" name="file_name" value = "<%=pcbg[index].pic%>"">
             <div class="col-md-4 mb-3">
               <label for="validationDefault01">First name</label>
               <input type="text" class="form-control" id="validationDefault01" placeholder="First name" name="first_name" value="<%=pcbg[index].first_name%>" required>
@@ -72,18 +73,26 @@
           </div>
 
           <div class="form-row">
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 mb-3">
               <label for="validationDefault04">Relation to Vanderbilt</label>
               <input type="text" class="form-control" id="validationDefault04" placeholder="Relation to Vanderbilt" name="relation" value="<%=pcbg[index].relation%>" required>
             </div>
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 mb-3">
               <label for="validationDefault05">Major/Program</label>
               <input type="text" class="form-control" id="validationDefault05" placeholder="Major/Program" name="major_or_program" value="<%=pcbg[index].major_or_program%>" required>
             </div>
-            <div class="col-md-4 mb-3">
-              <label for="validationDefault06">Location</label>
-              <input type="text" class="form-control" id="validationDefault06" placeholder="Location" name="location" value="<%=pcbg[index].location%>" required>
-            </div>
+
+          </div>
+
+          <div class="form-row">
+          <div class="col-md-6 mb-3">
+          <label for="validationDefault03">Occupation</label>
+          <input type="text" class="form-control" id="validationDefault03" placeholder="Occupation" name="occupation" value="<%=pcbg[index].occupation%>" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="validationDefault06">Location</label>
+            <input type="text" class="form-control" id="validationDefault06" placeholder="Location" name="location" value="<%=pcbg[index].location%>" required>
+          </div>
           </div>
 
           <div class="form-row">

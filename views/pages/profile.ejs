@@ -33,12 +33,21 @@
 
               </div>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
         <div class="row">
           <div class="description text-center">
             <p><%=pcbg[index].occupation%></p>
             <%if(locals.user) {%> <a class="btn btn-success" href="/editprofile$<%=pcbg[index].uid-1%>">Edit</a> <%}%>
+=======
+<div class="row">
+            <div class="description text-center">
+                <p><%=pcbg[index].occupation%></p>
+                <a class="btn btn-success" href="/editprofile$<%=pcbg[index].uid-1%>">Edit</a>
+                <a class="btn btn-success" href="/deleteprofile$<%=pcbg[index].uid-1%>">Delete</a>
+                <a class="btn btn-success" href="/markprofile$<%=pcbg[index].uid-1%>">Mark</a>
+>>>>>>> fa6fb1ebb23626b722b3840349c6fca395c5344e
             </div>
             </div>
         </div>
