@@ -107,9 +107,9 @@ app.get(/^\/addprofile/, addProfile);
 
 app.post(/^\/addprofile/, addedProfile);
 
-app.get(/^\/editprofile\$(\d+)/, secured(), editPage);
+app.get(/^\/editprofile\$(\d+)/, editPage);
 
-app.post(/^\/editprofile\$(\d+)/, secured(), editedPage);
+app.post(/^\/editprofile\$(\d+)/, editedPage);
 
 app.get(/^\/deleteprofile\$(\d+)/, secured(), deletePage);
 
