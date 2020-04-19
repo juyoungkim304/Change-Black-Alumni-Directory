@@ -103,17 +103,17 @@ app.use('/', login);
 
 app.get(/^\/searchresults=([0-9]+)&(.*)/, searchPage);
 
-app.get(/^\/addprofile/, secured(), addProfile);
+app.get(/^\/addprofile/, addProfile);
 
-app.post(/^\/addprofile/, secured(), addedProfile);
+app.post(/^\/addprofile/, addedProfile);
 
-app.get(/^\/editprofile\$(\d+)/, editPage);
+app.get(/^\/editprofile\$(\d+)/, secured(), editPage);
 
-app.post(/^\/editprofile\$(\d+)/, editedPage);
+app.post(/^\/editprofile\$(\d+)/, secured(), editedPage);
 
-app.get(/^\/deleteprofile\$(\d+)/, deletePage);
+app.get(/^\/deleteprofile\$(\d+)/, secured(), deletePage);
 
-app.get(/^\/markprofile\$(\d+)/, markPage);
+app.get(/^\/markprofile\$(\d+)/, secured(), markPage);
 
 app.listen('8080');
 console.log("Listening at 8080...");
