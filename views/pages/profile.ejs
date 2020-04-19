@@ -39,9 +39,6 @@
           <div class="description text-center">
             <p><%=pcbg[index].occupation%></p>
             <%if(locals.user) {%>
-<<<<<<< HEAD
-            <a class="btn btn-success" href="/deleteprofile$<%=pcbg[index].uid-1%>">Delete</a>            
-=======
             <p>MARKED? (ADMIN ONLY): <%=pcbg[index].marked%></p>
 
             <%}%>
@@ -51,10 +48,7 @@
             <%if(locals.user) {%>
             <a class="btn btn-success" href="/deleteprofile$<%=pcbg[index].uid-1%>">Delete
               Profile</a>
-
->>>>>>> acb7fb5033b2390963687b057950be069296e268
             <%}%>
-            <a class="btn btn-success" href="/markprofile$<%=pcbg[index].uid-1%>">Mark</a>
             </div>
             </div>
         </div>
