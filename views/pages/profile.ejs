@@ -40,9 +40,9 @@
             <p><%=pcbg[index].occupation%></p>
             <a class="btn btn-success" href="/editprofile$<%=pcbg[index].uid-1%>">Edit</a>
             <%if(locals.user) {%>
-            <a class="btn btn-success" href="/deleteprofile$<%=pcbg[index].uid-1%>">Delete</a>
-            <a class="btn btn-success" href="/markprofile$<%=pcbg[index].uid-1%>">Mark</a>
+            <a class="btn btn-success" href="/deleteprofile$<%=pcbg[index].uid-1%>">Delete</a>            
             <%}%>
+            <a class="btn btn-success" href="/markprofile$<%=pcbg[index].uid-1%>">Mark</a>
             </div>
             </div>
         </div>

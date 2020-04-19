@@ -113,7 +113,7 @@ app.post(/^\/editprofile\$(\d+)/, editedPage);
 
 app.get(/^\/deleteprofile\$(\d+)/, secured(), deletePage);
 
-app.get(/^\/markprofile\$(\d+)/, secured(), markPage);
+app.get(/^\/markprofile\$(\d+)/, markPage);
 
 app.listen('8080');
 console.log("Listening at 8080...");
