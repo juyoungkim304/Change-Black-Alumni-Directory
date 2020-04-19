@@ -9,6 +9,11 @@ To run node app:
    - `npm install express`
    - `npm install mysql`
    - `npm install body-parser --save`
+   - `npm install passport`
+   - `npm install passport-auth0`
+   - `npm install router`
+   - `npm install express-session`
+   - `npm install dotenv`
 4. In your terminal, run `node app`
 5. In your browser, navigate to `localhost:8080` and you should be good to go!
 
