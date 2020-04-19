@@ -1,45 +1,53 @@
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
-    <link rel="stylesheet" href="../../public/profilepage/styles/profileStyle.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+  <link rel="stylesheet" href="../../public/profilepage/styles/profileStyle.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
 <header>
-    <% include ../partials/header %>
+  <% include ../partials/header %>
 </header>
 
 <body class="profile-page">
-<div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
-<div class="main main-raised">
+  <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
+  <div class="main main-raised">
     <div class="profile-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 ml-auto mr-auto">
-                    <div class="profile">
-                        <div class="avatar">
-                            <img src="<%=pcbg[index].pic%>" alt="Circle Image" class="img-raised rounded-circle img-fluid">
-                        </div>
-                        <div class="name">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto">
+            <div class="profile">
+              <div class="avatar">
+                <img src="<%=pcbg[index].pic%>" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+              </div>
+              <div class="name">
 
-                            <h3 class="title"><%=pcbg[index].first_name%> <%=pcbg[index].last_name%> (<%=pcbg[index].preferred_name%>)</h3>
+                <h3 class="title"><%=pcbg[index].first_name%> <%=pcbg[index].last_name%> (<%=pcbg[index].preferred_name%>)</h3>
 
-                            <h6><%=pcbg[index].relation%> - <%=pcbg[index].major_or_program%> — <%=pcbg[index].location%></h6>
+                <h6><%=pcbg[index].relation%> - <%=pcbg[index].major_or_program%> — <%=pcbg[index].location%></h6>
 
-                            <a href= "tel:<%=pcbg[index].phone%>" class="btn btn-just-icon btn-link btn-phone"><i class="fa fa-phone"></i></a>
-                            <a href= "mailto: <%=pcbg[index].email%>" class="btn btn-just-icon btn-link btn-email"><i class="fa fa-envelope-o"></i></a>
-                            <a href= "<%=pcbg[index].external_link%>" class="btn btn-just-icon btn-link btn-email"><i class="fa fa-link"></i></a>
+                <a href="tel:<%=pcbg[index].phone%>" class="btn btn-just-icon btn-link btn-phone"><i class="fa fa-phone"></i></a>
+                <a href="mailto: <%=pcbg[index].email%>" class="btn btn-just-icon btn-link btn-email"><i class="fa fa-envelope-o"></i></a>
+                <a href="<%=pcbg[index].external_link%>" class="btn btn-just-icon btn-link btn-email"><i class="fa fa-link"></i></a>
 
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+<<<<<<< HEAD
+          </div>
+        </div>
+        <div class="row">
+          <div class="description text-center">
+            <p><%=pcbg[index].occupation%></p>
+            <%if(locals.user) {%> <a class="btn btn-success" href="/editprofile$<%=pcbg[index].uid-1%>">Edit</a> <%}%>
+=======
 <div class="row">
             <div class="description text-center">
                 <p><%=pcbg[index].occupation%></p>
                 <a class="btn btn-success" href="/editprofile$<%=pcbg[index].uid-1%>">Edit</a>
+                <a class="btn btn-success" href="/deleteprofile$<%=pcbg[index].uid-1%>">Delete</a>
+                <a class="btn btn-success" href="/markprofile$<%=pcbg[index].uid-1%>">Mark</a>
+>>>>>>> fa6fb1ebb23626b722b3840349c6fca395c5344e
             </div>
             </div>
         </div>
