@@ -83,6 +83,10 @@
 
         // Url for current page
         var s_url = <%-JSON.stringify(search_url)%>;
+
+        //check for login
+        var is_authenticated = false;
+        <% if (user) { %>is_authenticated = true; <%}%>
     </script>
     <script type="text/javascript" src="/public/searchresultspage/scripts/populateWebpage.js"></script>
     <script type="text/javascript" src="/public/searchresultspage/scripts/pagination.js"></script>

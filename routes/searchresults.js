@@ -19,7 +19,7 @@ module.exports = {
         var re = /.+([0-9]+)&(.+)/;
         searchParams = re.exec(url);
         var page_number;
-        
+
         if(searchParams === null) { // Checks whether or not any search criteria was provided
             searchParams = '';
             re = /[0-9]+/; // If no search params, still need to get page number
@@ -29,7 +29,7 @@ module.exports = {
             page_number = searchParams[1]; // Results from regex are in a array, so need to index
             searchParams = searchParams[2];
         }
-        
+
         // Store all the queries in a javascript object, with the criteria-type as the keys and the
         // (possibly multiple) value(s) for each criteria as the values (each in a list) for each key
         var searchQueries = {
@@ -68,7 +68,7 @@ module.exports = {
                             case 'mp':
                                 return 'major_or_program';
                             case 'rl':
-                                return 'relation';    
+                                return 'relation';
                             default:
                                 return '';
                         }
@@ -77,16 +77,16 @@ module.exports = {
                         // Handles multiple values for a certain key
                         queryList.push(p + "=" + "'" + queries[q].join("' OR " + p + "='") + "'");
                     }
-                } 
+                }
             }
-            
+
             return queryList.length === 0 ? "*" : '(' + queryList.join(") AND (") + ')';
         }
 
         // Handles the case where no search criteria provided, resulting in displaying all available
         // results contained in database
         var converted = convertToQuery(searchQueries);
-        var selection = converted === "*" ? converted : "first_name, last_name, major_or_program, relation, pic, uid"; 
+        var selection = converted === "*" ? converted : "first_name, last_name, major_or_program, relation, pic, uid";
         var condition = converted === "*" ? "" : " where " + converted;
 
         // Database query command
