@@ -20,3 +20,6 @@ To run node app:
 To add to node app:
 1. Create a new sub-folder in `public` that will contain all of the javascript and css files (as well as anything else that modifies your ejs file). Within this sub-folder, create sub-folders for each of your file types (e.g. `scripts` for .js files, `styles` for your .css files, etc.).
 2. Add your .ejs file to `views/pages`. Be sure to change file directory for .css and .js files linked inside of your .ejs file.
+
+Current Contributors: Juyoung Kim, Tabitha Lee, Bao Pham, Stella Wang
+Previous Contributors: Jonathan Steward, Arjun Keerthi, Joe Huang, Zubeir Osman
