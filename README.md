@@ -1,4 +1,6 @@
 # Change++ Black Alumni Directory
+![Change Logo](https://github.com/juyoungkim304/Change-Black-and-Latinx-Directory/blob/master/ChangeLogo.JPG)
+
 ## A directory for the Black Alumni Organization of Peabody College at Vanderbilt University
 
 ### To run the application:
