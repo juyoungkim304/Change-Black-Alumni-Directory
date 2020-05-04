@@ -1,6 +1,4 @@
 # Change++ Black Alumni Directory
-![Change Logo](https://github.com/juyoungkim304/Change-Black-and-Latinx-Directory/blob/master/ChangeLogo.JPG)
-
 ## A directory for the Black Alumni Organization of Peabody College at Vanderbilt University
 
 ### To run the application:
@@ -32,3 +30,5 @@
 
 Current Contributors: Juyoung Kim (juyoungkim304), Tabitha Lee (tabithasylee), Bao Pham, Stella Wang (stellawangty)
 Previous Contributors: Jonathan Steward, Arjun Keerthi (arjunkeerthi), Joe Huang, Zubeir Osman (osmanzm)
+
+![Change Logo](https://github.com/juyoungkim304/Change-Black-and-Latinx-Directory/blob/master/ChangeLogo.JPG)
