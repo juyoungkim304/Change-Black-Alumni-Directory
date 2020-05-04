@@ -4,7 +4,7 @@
 ### To run the application:
 1. Install node.
 2. Navigate to change-black-and-latinx-directory (which you likely are already in) in your terminal.
-3. If you haven't already, run `npm install` in your terminal
+3. If you haven't already, run `npm install` in your terminal to install all required dependencies
 4. In your terminal, run `node app`
 5. In your browser, navigate to `localhost:8080` and you should be good to go!
 
