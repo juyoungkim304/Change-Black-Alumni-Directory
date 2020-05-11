@@ -35,7 +35,7 @@ module.exports = {
 
 		let mailOptions = {
 			from: 'Vanderbilt Alumni Directory',
-			to: 'bao.d.pham@vanderbilt.edu',
+			to: 'juyoung.kim304@gmail.com',
 			subject: 'Suspicious Account Alert',
 			text: 'Profile ' + result[0].first_name + ' ' + result[0].last_name + ' has been flagged.'
 		};
