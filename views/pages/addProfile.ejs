@@ -1,132 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-    <script>
-        var fileName;
-        function getFileName() {
-            fileName = document.getElementById('fileName').files[0].name;
-            document.getElementById('fileValue').value = fileName;
-        }
-    </script>
+  <script>
+    var fileName;
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add New Profile Form</title>
-    <link rel="stylesheet" href="../public/addprofile/addProfileStyle.css">
+    function getFileName() {
+      fileName = document.getElementById('fileName').files[0].name;
+      document.getElementById('fileValue').value = fileName;
+    }
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add New Profile Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../public/main.css">
+  <link rel="stylesheet" href="../public/addprofile/addProfileStyle.css">
 
 </head>
 
 <body>
-<div class="form_wrapper">
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <div class="form_wrapper">
     <div class="form_container">
-        <div class="title_container">
-            <h2>Add Profile</h2>
-        </div>
-        <div class="row clearfix">
-            <div class="">
-
-
-                <form action="/addprofile" method="post" class="needs-validation" novalidate>
-                    <div class="row clearfix">
-                        <div class="col_half">
-                            <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                                <input type="text" name="first_name" placeholder="First Name" required />
-                            </div>
-                        </div>
-                        <div class="col_half">
-                            <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                                <input type="text" name="last_name" placeholder="Last Name" required />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                        <input type="text" name="preferred_name" placeholder="Preferred Name" />
-                    </div>
-
-                    <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-                        <input type="email" name="email" placeholder="Email" required />
-                    </div>
-
-                    <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
-                        <input type="tel" name="phone" placeholder="Phone" />
-                    </div>
-
-                    <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-map-marker"></i></span>
-                        <input type="text" name="location" placeholder="Location" />
-                    </div>
-
-                    <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-suitcase"></i></span>
-                        <input type="text" name="occupation" placeholder="Occupation" required />
-                    </div>
-
-                    <div class="input_field form_control">
-
-                        <select name="major_or_program">
-                            <option value="no_major_selected">Major or Program</option>
-                            <option value="Human and Organizational Development">Human and Organizational Development</option>
-                            <option value="Leadership, Policy, and Organizations">Leadership, Policy, and Organizations</option>
-                            <option value="Psychology and Human Development">Psychology and Human Development</option>
-                            <option value="Special Education">Special Education</option>
-                            <option value="Teaching and Learning">Teaching and Learning</option>
-                            <option value="Child Studies">Child Studies</option>
-                            <option value="Community Development">Community Development</option>
-                            <option value="Education Policy">Education Policy</option>
-                            <option value="English Language Learners">English Language Learners</option>
-                            <option value="Higher Education Administration">Higher Education Administration</option>
-                            <option value="Human Development Counseling">Human Development Counseling</option>
-                            <option value="Independent School Leadership">Independent School Leadership</option>
-                            <option value="International Education Policy and Management">International Education Policy and Management</option>
-                            <option value="Learning, Diversity, and Urban Studies">Learning, Diversity, and Urban Studies</option>
-                            <option value="Learning and Design">Learning and Design</option>
-                            <option value="Quantitative Methods">Quantitative Methods</option>
-                            <option value="Reading Education">Reading Education</option>
-                            <option value="Secondary Education">Secondary Education</option>
-
-
-                            <option value="cognitive_studies">Cognitive Studies</option>
-                        </select>
-                    </div>
-
-                    <div class="input_field form_control">
-
-                        <select name="relation">
-                            <option value="no_relation_selected">Relation to Vanderbilt</option>
-                            <option value="Faculty">Faculty</option>
-                            <option value="Alumni">Alumni</option>
-                            <option value="Graduate Student">Graduate Student</option>
-                        </select>
-                    </div>
-
-                    <div class="input_field form_control">
-
-                        <input type="hidden" class="form-control" id="fileValue" name="file_name">
-                    </div>
-
-
-                    <button type="submit" class="btn btn-success float-right">Add Profile</button>
-                </form>
-
-                <div class="photoUpload">
-                    <form action="http://changedirectory.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
-                        <div class="col_half">
-                            <div class="input_field form_control">
-                                <input type="hidden" name="key" value="${filename}">
-                                <input type="file" name="file" id="fileName" required>
-                            </div>
-                            <div class="input_field form_control">
-                                <button onclick="getFileName()" type="submit" class="btn btn-success float-right">Upload Photo</button>
-                            </div>
-                    </form>
-                </div>
-
+      <div class="title_container">
+        <h2>Add Profile</h2>
+      </div>
+      <div class="row clearfix">
+        <form action="http://changedirectory.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+          <div class="input_field form_control">
+            <div class="col_half">
+              <input type="hidden" name="key" value="${filename}">
+              <input type="file" name="file" id="fileName" required>
             </div>
-        </div>
+            <div class="col_half">
+            <button onclick="getFileName()" type="submit" class="btn btn-success float-right">Upload Photo</button>
+          </div>
+          </div>
+        </form>
+        <br>
+        <form action="/addprofile" method="post" class="needs-validation" novalidate>
+          <div class="row clearfix">
+            <div class="col_half">
+              <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="first_name" placeholder="First Name" required />
+              </div>
+            </div>
+            <div class="col_half">
+              <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="last_name" placeholder="Last Name" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+            <input type="text" name="preferred_name" placeholder="Preferred Name" />
+          </div>
+
+          <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+
+          <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+            <input type="tel" name="phone" placeholder="Phone" />
+          </div>
+
+          <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-map-marker"></i></span>
+            <input type="text" name="location" placeholder="Location" />
+          </div>
+
+          <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-suitcase"></i></span>
+            <input type="text" name="occupation" placeholder="Occupation" required />
+          </div>
+
+          <div class="input_field form_control">
+
+            <select name="major_or_program">
+              <option value="no_major_selected">Major or Program</option>
+              <option value="Human and Organizational Development">Human and Organizational Development</option>
+              <option value="Leadership, Policy, and Organizations">Leadership, Policy, and Organizations</option>
+              <option value="Psychology and Human Development">Psychology and Human Development</option>
+              <option value="Special Education">Special Education</option>
+              <option value="Teaching and Learning">Teaching and Learning</option>
+              <option value="Child Studies">Child Studies</option>
+              <option value="Community Development">Community Development</option>
+              <option value="Education Policy">Education Policy</option>
+              <option value="English Language Learners">English Language Learners</option>
+              <option value="Higher Education Administration">Higher Education Administration</option>
+              <option value="Human Development Counseling">Human Development Counseling</option>
+              <option value="Independent School Leadership">Independent School Leadership</option>
+              <option value="International Education Policy and Management">International Education Policy and Management</option>
+              <option value="Learning, Diversity, and Urban Studies">Learning, Diversity, and Urban Studies</option>
+              <option value="Learning and Design">Learning and Design</option>
+              <option value="Quantitative Methods">Quantitative Methods</option>
+              <option value="Reading Education">Reading Education</option>
+              <option value="Secondary Education">Secondary Education</option>
+              <option value="cognitive_studies">Cognitive Studies</option>
+            </select>
+          </div>
+
+          <div class="input_field form_control">
+            <select name="relation">
+              <option value="no_relation_selected">Relation to Vanderbilt</option>
+              <option value="Faculty">Faculty</option>
+              <option value="Alumni">Alumni</option>
+              <option value="Graduate Student">Graduate Student</option>
+            </select>
+          </div>
+
+          <div class="input_field form_control">
+            <input type="hidden" class="form-control" id="fileValue" name="file_name">
+          </div>
+
+          <button type="submit" class="btn btn-success float-right">Add Profile</button>
+        </form>
+
+      </div>
     </div>
-</div>
-</body>
-<footer>
+  </div>
+
+  <footer>
     <% include ../partials/footer %>
-</footer>
+  </footer>
+</body>
