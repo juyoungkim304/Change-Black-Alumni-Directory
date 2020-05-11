@@ -17,7 +17,7 @@ body {
   width: 400px;
   max-width: 100%;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 25px;
   margin: 8% auto 0;
   position: relative;
@@ -65,7 +65,7 @@ body {
 .form_wrapper .row > div {
   padding: 0 15px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .form_wrapper .col_half {
@@ -105,7 +105,7 @@ body {
   height: 35px;
   border: 1px solid #cccccc;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   outline: none;
   -webkit-transition: all 0.30s ease-in-out;
   transition: all 0.30s ease-in-out;
@@ -189,9 +189,9 @@ body {
   position: absolute;
   top: 7px;
   -webkit-transform: scaleX(-1) rotate(135deg);
-          transform: scaleX(-1) rotate(135deg);
+  transform: scaleX(-1) rotate(135deg);
   -webkit-transform-origin: left top;
-          transform-origin: left top;
+  transform-origin: left top;
   width: 7px;
   display: none;
 }
@@ -440,3 +440,11 @@ body {
   }
 }
 /*# sourceMappingURL=addProfileStyle.css.map */
+
+
+.submitBtn {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+  padding-left: 130px;
+}

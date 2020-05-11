@@ -39,12 +39,14 @@
           <div class="description text-center">
             <p><%=pcbg[index].occupation%></p>
             <%if(locals.user) {%>
-            <p>MARKED? (ADMIN ONLY): <%=pcbg[index].marked%></p>
-            <a class="btn btn-success" href="/deleteprofile$<%=pcbg[index].uid-1%>">Delete</a>
+            <p>FLAGGED? (ADMIN ONLY): <%=pcbg[index].marked%></p>
             <%}%>
-            <a class="btn btn-success" href="/editprofile$<%=pcbg[index].uid-1%>">Edit Profile</a>
-            <a class="btn btn-success" href="/markprofile$<%=pcbg[index].uid-1%>">Suspicious
-              Profile? Click Here To Alert Admin</a>
+            <a class="btn btn-success" href="/editprofile$<%=pcbg[index].uid-1%>">Edit</a>
+            <%if(locals.user) {%>
+            <a class="btn btn-danger" href="/deleteprofile$<%=pcbg[index].uid-1%>">Delete</a>
+            <%}%>
+            <a class="btn btn-danger" href="/markprofile$<%=pcbg[index].uid-1%>">Flag
+              Suspicious Profile</a>
             </div>
         </div>
     </div>
