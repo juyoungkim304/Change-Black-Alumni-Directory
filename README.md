@@ -29,6 +29,7 @@
 - router
 - dotenv
 - express-session
+- node-mailer
 
 Current Contributors: Juyoung Kim (juyoungkim304), Tabitha Lee (tabithasylee), Bao Pham, Stella Wang (stellawangty)
 Previous Contributors: Jonathan Steward, Arjun Keerthi (arjunkeerthi), Joe Huang, Zubeir Osman (osmanzm)
