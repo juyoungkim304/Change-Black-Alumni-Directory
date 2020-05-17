@@ -31,7 +31,8 @@
 - express-session
 - node-mailer
 
-Current Contributors: Juyoung Kim (juyoungkim304), Tabitha Lee (tabithasylee), Bao Pham (baosimple), Stella Wang (stellawangty)
+Current Contributors: Juyoung Kim (juyoungkim304), Tabitha Lee (tabithasylee), Bao Pham (baosimple), Stella Wang (stellawangty) 
+
 Previous Contributors: Jonathan Steward, Arjun Keerthi (arjunkeerthi), Joe Huang, Zubeir Osman (osmanzm)
 
 ![Change Logo](https://github.com/juyoungkim304/Change-Black-and-Latinx-Directory/blob/master/assets/ChangeLogo.JPG)
