@@ -12,7 +12,7 @@ module.exports = {
 		});
 	},
 
-	sendEmail: (req, res) => {
+	flagProfile: (req, res) => {
 
 	let query = "SELECT * FROM pcbg WHERE uid = ?";
 	const uid = parseInt(req.params[0]) + 1;
@@ -52,7 +52,18 @@ module.exports = {
 			}
 
 		});
+	});
 
+	let index = parseInt(req.params[0], 10) + 1;
+	var fields = [index];
+	let query2 = "UPDATE pcbg SET marked = 1 WHERE uid = ?";
+	db.query(query2, fields, (err) => {
+		if (err){
+			console.log(err);
+			res.redirect('/');
+			return;
+		}
+		console.log("Marked profile");
 		res.redirect('/profile$' + req.params[0]);
 	});
 }

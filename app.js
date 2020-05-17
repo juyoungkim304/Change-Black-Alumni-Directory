@@ -80,12 +80,11 @@ global.db = db;
 
 var login = require('./routes/auth.js');
 const {profilePage} = require('./routes/profile.js');
-const {sendEmail} = require('./routes/profile.js');
+const {flagProfile} = require('./routes/profile.js');
 const {searchPage} = require('./routes/searchresults.js');
 const {editPage, editedPage} = require('./routes/editProfile.js');
 const {addProfile, addedProfile} = require('./routes/addProfile.js');
 const {deletePage} = require('./routes/deleteProfile.js');
-const {markPage} = require('./routes/markProfile.js');
 
 app.set('view engine', 'ejs');
 
@@ -114,9 +113,7 @@ app.post(/^\/editprofile\$(\d+)/, editedPage);
 
 app.get(/^\/deleteprofile\$(\d+)/, secured(), deletePage);
 
-app.get(/^\/markprofile\$(\d+)/, markPage);
-
-app.post(/^\/profile\$(\d+)/, sendEmail);
+app.post(/^\/profile\$(\d+)/, flagProfile);
 
 
 app.listen('8080');
