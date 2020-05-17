@@ -10,7 +10,7 @@ module.exports = {
 			console.log("Reached profile.js");
 			res.render('pages/profile.ejs',{pcbg: result, index: 0});
 		});
-		
+
 
 	}
 }
