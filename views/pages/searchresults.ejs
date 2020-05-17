@@ -75,20 +75,17 @@
     // Get and store values from searchresults.js
 
     // Page number
-    var p_num = parseInt( < % -JSON.stringify(page_num) % > );
+    var p_num = parseInt(<%-JSON.stringify(page_num)%>);
 
     // Array of results from database query
-    var pcbg = < % -JSON.stringify(pcbg) % > ;
+    var pcbg = <%-JSON.stringify(pcbg)%>;
 
-    // Url for current page
-    var s_url = < % -JSON.stringify(search_url) % > ;
+    // Url for current pagevar
+    var s_url = <%-JSON.stringify(search_url)%>;
 
     //check for login
-    var is_authenticated = false; <
-    %
-    if (user) {
-      % > is_authenticated = true; < %
-    } % >
+    var is_authenticated = false;
+        <% if (user) { %>is_authenticated = true; <%}%>
   </script>
   <script type="text/javascript" src="/public/searchresultspage/scripts/populateWebpage.js"></script>
   <script type="text/javascript" src="/public/searchresultspage/scripts/pagination.js"></script>
