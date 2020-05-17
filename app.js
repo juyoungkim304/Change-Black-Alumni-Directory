@@ -18,10 +18,10 @@ dotenv.config();
 
 // config express-session
 var sess = {
-  secret: 'admin',
-  cookie: {},
-  resave: false,
-  saveUninitialized: true
+    secret: 'admin',
+    cookie: {},
+    resave: false,
+    saveUninitialized: true
 };
 
 //session handling
@@ -34,29 +34,29 @@ app.use(passport.session());
 
 //use auth0
 var strategy = new Auth0Strategy(
-  {
-    domain: process.env.AUTH0_DOMAIN,
-    clientID: process.env.AUTH0_CLIENT_ID,
-    clientSecret: process.env.AUTH0_CLIENT_SECRET,
-    callbackURL:
-      process.env.AUTH0_CALLBACK_URL || 'http://localhost:8080/callback'
-  },
-  function (accessToken, refreshToken, extraParams, profile, done) {
-    // accessToken is the token to call Auth0 API (not needed in the most cases)
-    // extraParams.id_token has the JSON Web Token
-    // profile has all the information from the user
-    return done(null, profile);
-  }
+    {
+        domain: process.env.AUTH0_DOMAIN,
+        clientID: process.env.AUTH0_CLIENT_ID,
+        clientSecret: process.env.AUTH0_CLIENT_SECRET,
+        callbackURL:
+            process.env.AUTH0_CALLBACK_URL || 'http://localhost:8080/callback'
+    },
+    function (accessToken, refreshToken, extraParams, profile, done) {
+        // accessToken is the token to call Auth0 API (not needed in the most cases)
+        // extraParams.id_token has the JSON Web Token
+        // profile has all the information from the user
+        return done(null, profile);
+    }
 );
 passport.use(strategy);
 
 //serialize and deserialize user instances to and from the session
 passport.serializeUser(function (user, done) {
-  done(null, user);
+    done(null, user);
 });
 
 passport.deserializeUser(function (user, done) {
-  done(null, user);
+    done(null, user);
 });
 
 
@@ -80,11 +80,11 @@ global.db = db;
 
 var login = require('./routes/auth.js');
 const {profilePage} = require('./routes/profile.js');
+const {flagProfile} = require('./routes/profile.js');
 const {searchPage} = require('./routes/searchresults.js');
 const {editPage, editedPage} = require('./routes/editProfile.js');
 const {addProfile, addedProfile} = require('./routes/addProfile.js');
 const {deletePage} = require('./routes/deleteProfile.js');
-const {markPage} = require('./routes/markProfile.js');
 
 app.set('view engine', 'ejs');
 
@@ -113,7 +113,8 @@ app.post(/^\/editprofile\$(\d+)/, editedPage);
 
 app.get(/^\/deleteprofile\$(\d+)/, secured(), deletePage);
 
-app.get(/^\/markprofile\$(\d+)/, markPage);
+app.post(/^\/profile\$(\d+)/, flagProfile);
+
 
 app.listen('8080');
 console.log("Listening at 8080...");

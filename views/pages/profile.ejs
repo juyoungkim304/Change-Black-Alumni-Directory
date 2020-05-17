@@ -46,14 +46,31 @@
             <%if(locals.user) {%>
             <a class="btn btn-danger" href="/deleteprofile$<%=pcbg[index].uid-1%>">Delete</a>
             <%}%>
-            <a class="btn btn-danger" href="/markprofile$<%=pcbg[index].uid-1%>">Flag
-              Suspicious Profile</a>
+
+            <form action="/profile$<%=pcbg[index].uid-1%>" method="post" class="needs-validation" novalidate>
+              <button type="submit" class="btn btn-danger" value="submit">Flag Suspicious
+                Profile</button>
+            </form>
+
             </div>
         </div>
     </div>
 </div>
 </div>
 </div>
+<script>
+
+  function displaySent() {
+    console.log("1")
+    alert("Thank you for your feedback! An alert email has been sent.");
+  }
+
+  function sendAlert() {
+
+  }
+
+</script>
+
 
 
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
