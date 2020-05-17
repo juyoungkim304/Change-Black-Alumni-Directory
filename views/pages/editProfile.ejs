@@ -1,5 +1,6 @@
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" type="text/css" href="../public/main.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
   <link rel="stylesheet" href="../../public/profilepage/styles/profileStyle.css">
@@ -20,7 +21,8 @@
   <% include ../partials/header %>
 </header>
 
-<body class="profile-page">
+<body>
+  <div class="profile-page">
   <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
   <div class="main main-raised">
     <div class="profile-content">
@@ -121,9 +123,12 @@
       </div>
     </div>
   </div>
+  </div>
 
 
-
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
 
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
