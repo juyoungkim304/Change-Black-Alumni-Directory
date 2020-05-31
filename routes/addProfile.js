@@ -15,10 +15,11 @@ module.exports = {
         let email = req.body.email;
         let pic = 'http://changedirectory.s3.amazonaws.com/' + req.body.file_name;
         let external_link = req.body.external_link;
+        let department = req.body.department;
 
-        var fields = [first_name, last_name, preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link]
+        var fields = [first_name, last_name, preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link, department]
 
-        let query = "INSERT INTO pcbg (first_name, last_name, preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        let query = "INSERT INTO pcbg (first_name, last_name,preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link, marked, department) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?)";
 
         db.query(query, fields, (error) => {
 
