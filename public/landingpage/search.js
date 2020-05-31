@@ -11,17 +11,24 @@
         var firstName = document.querySelector('#firstNameInput').value;
         var lastName = document.querySelector('#lastNameInput').value;
         var departments = document.getElementsByClassName("form-check-input-department");
-
-        var status = document.getElementsByClassName("form-check-input-status");
+        var major = document.getElementsByClassName("form-check-input-major");
+        var relation = document.getElementsByClassName("form-check-input-relation");
 
         var departmentsQuery = "";
         for (var i = 0; i < departments.length; i++) {
             if (departments[i].checked) {
-                departmentsQuery += "$mp:" + departments[i].value;
+                departmentsQuery += "d:" + departments[i].value;
             }
         }
 
-        var statusQuery = "";
+        var majorsQuery = "";
+        for (var i = 0; i < major.length; i++) {
+            if (major[i].checked) {
+                majorsQuery += "$mp:" + major[i].value;
+            }
+        }
+
+        var relationQuery = "";
         for(let i = 0; i < status.length; i++){
             if(status[i].checked){
                 statusQuery+= "$rl:"+ status[i].value;
@@ -37,9 +44,11 @@
         if (departmentsQuery !== "") {
             queryUrl += departmentsQuery;
         }
-
-        if(statusQuery !== ""){
-            queryUrl += statusQuery;
+        if (majorsQuery !== "") {
+            queryUrl += majorsQuery;
+        }
+        if(relationQuery !== ""){
+            queryUrl += relationQuery;
         }
         // Note, every new criteria is started with '$', hence every new additon to 'queryUrl'
         // starting with '$'
