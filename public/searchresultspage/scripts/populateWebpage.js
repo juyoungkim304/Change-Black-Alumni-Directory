@@ -90,7 +90,7 @@ function createContent(content, is_authenticated) {
   // Major
   var major = document.createElement('p');
   major.setAttribute('class', 'card-text');
-  major.innerHTML = 'Major: ' + content['major_or_program'];
+  major.innerHTML = 'Program: ' + content['major_or_program'];
 
   // Relation to Vanderbilt
   var relation = document.createElement('p');

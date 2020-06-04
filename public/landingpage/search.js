@@ -10,14 +10,14 @@
         var queryUrl = "";
         var firstName = document.querySelector('#firstNameInput').value;
         var lastName = document.querySelector('#lastNameInput').value;
-        var departments = document.getElementsByClassName("form-check-input-department");
+        var department = document.getElementsByClassName("form-check-input-department");
         var major = document.getElementsByClassName("form-check-input-major");
         var relation = document.getElementsByClassName("form-check-input-relation");
 
         var departmentsQuery = "";
-        for (var i = 0; i < departments.length; i++) {
-            if (departments[i].checked) {
-                departmentsQuery += "d:" + departments[i].value;
+        for (var i = 0; i < department.length; i++) {
+            if (department[i].checked) {
+                departmentsQuery += "$d:" + department[i].value;
             }
         }
 

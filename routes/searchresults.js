@@ -35,7 +35,7 @@ module.exports = {
         var searchQueries = {
             'fn':[],
             'ln':[],
-						'd':[],
+            'd':[],
             'mp':[],
             'rl':[]
         };
@@ -66,8 +66,8 @@ module.exports = {
                                 return 'first_name';
                             case 'ln':
                                 return 'last_name';
-														case 'd':
-																return 'department';
+                            case 'd':
+                                return 'department';
                             case 'mp':
                                 return 'major_or_program';
                             case 'rl':
