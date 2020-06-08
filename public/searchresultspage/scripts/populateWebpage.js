@@ -82,6 +82,9 @@ function createContent(content, is_authenticated) {
   var innerDiv = document.createElement('div');
   innerDiv.setAttribute('class', 'card-body');
 
+  var textWrapDiv = document.createElement('div');
+  textWrapDiv.setAttribute('class','text-wrap')
+
   // Name
   var name = document.createElement('h5');
   name.setAttribute('class', 'card-title');
@@ -114,8 +117,10 @@ function createContent(content, is_authenticated) {
 
   // Append information (besides image) to the inner div
   innerDiv.appendChild(name);
-  innerDiv.appendChild(major);
-  innerDiv.appendChild(relation);
+  // Append text to text-wrap before inner
+  textWrapDiv.appendChild(major);
+  textWrapDiv.appendChild(relation);
+  innerDiv.appendChild(textWrapDiv);
   if (is_authenticated) {
     innerDiv.appendChild(marked);
   }
