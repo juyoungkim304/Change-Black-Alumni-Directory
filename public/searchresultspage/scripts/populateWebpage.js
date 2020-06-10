@@ -91,14 +91,9 @@ function createContent(content, is_authenticated) {
   name.innerHTML = content['first_name'] + ' ' + content['last_name'];
 
   // Major
-  var major = document.createElement('p');
-  major.setAttribute('class', 'card-text');
-  major.innerHTML = 'Program: ' + content['major_or_program'];
-
-  // Relation to Vanderbilt
-  var relation = document.createElement('p');
-  relation.setAttribute('class', 'card-text');
-  relation.innerHTML = 'Status: ' + content['relation'];
+  var major_relation = document.createElement('p');
+  major_relation.setAttribute('class', 'card-text');
+  major_relation.innerHTML = 'Program: ' + content['major_or_program'] + '<br><br>Status: ' + content['relation'];
 
   if (is_authenticated) {
     var marked = document.createElement('p');
@@ -118,8 +113,7 @@ function createContent(content, is_authenticated) {
   // Append information (besides image) to the inner div
   innerDiv.appendChild(name);
   // Append text to text-wrap before inner
-  textWrapDiv.appendChild(major);
-  textWrapDiv.appendChild(relation);
+  textWrapDiv.appendChild(major_relation);
   innerDiv.appendChild(textWrapDiv);
   if (is_authenticated) {
     innerDiv.appendChild(marked);
