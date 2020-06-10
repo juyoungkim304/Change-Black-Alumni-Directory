@@ -78,7 +78,7 @@ module.exports = {
                     })(q);
                     if(queries[q].length !== 0) {
                         // Handles multiple values for a certain key
-                        queryList.push(p + "=" + "'" + queries[q].join("' OR " + p + "='") + "'");
+                        queryList.push(p + " RLIKE " + "'" + queries[q].join("' OR " + p + "='") + "'");
                     }
                 }
             }
