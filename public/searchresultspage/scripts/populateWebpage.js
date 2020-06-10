@@ -93,11 +93,11 @@ function createContent(content, is_authenticated) {
   // Major
   var major_relation = document.createElement('p');
   major_relation.setAttribute('class', 'card-text');
-  major_relation.innerHTML = 'Program: ' + content['major_or_program'] + '<br><br>Status: ' + content['relation'];
+  major_relation.innerHTML = 'Program: ' + content['major_or_program'] + "<br><br>Status: " + content['relation'];
+
 
   if (is_authenticated) {
     var marked = document.createElement('p');
-    relation.setAttribute('class', 'card-text');
     if (content['marked']) {
       marked.innerHTML = 'Admin Note: <b>MARKED</b>';
     } else {
