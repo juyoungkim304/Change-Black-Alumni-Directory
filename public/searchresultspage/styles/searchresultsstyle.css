@@ -55,8 +55,20 @@
 
 .card-text{
     /* font-size: 15px; */
-    height: 50px;
-    overflow-y: scroll;
+    height: 125px;
+    overflow-y: auto;
+}
+
+.card-text::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+
+.card-text::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: rgb(216, 171, 76);
 }
 
 .outside-header-div {

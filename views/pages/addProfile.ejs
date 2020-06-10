@@ -34,24 +34,25 @@
     <div class="row clearfix">
       <form action="http://changedirectory.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
         <div class="input_field form_control">
-          <div class="col_half">
+          <div class="col_md_6 col_half" style="padding-left:15px;">
             <input type="hidden" name="key" value="${filename}">
             <input type="file" name="file" id="fileName" required>
           </div>
-          <div class="col_half">
-            <button onclick="getFileName()" type="submit" class="btn btn-success float-right">Upload Photo</button>
+          <div class="col_md_6 col_half">
+            <button onclick="getFileName()" type="submit" class="btn btn-success" style="float:right;">Upload Photo</button>
           </div>
         </div>
       </form>
-      <br>
+    </div>
+    <p>*note: you must press upload photo to confirm the image</p>
       <form action="/addprofile" method="post" class="needs-validation" novalidate>
         <div class="row clearfix">
-          <div class="col_half">
+          <div class="col_md_6 col_half">
             <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
               <input type="text" name="first_name" placeholder="First Name" required />
             </div>
           </div>
-          <div class="col_half">
+          <div class="col_md_6 col_half">
             <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
               <input type="text" name="last_name" placeholder="Last Name" required />
             </div>
@@ -82,7 +83,9 @@
           <input type="text" name="external_link" placeholder="Website or External Link" required />
         </div>
 
-        <div class="input_field form_control">
+        </div>
+        <div class="row">
+        <div class="input_field form_control col-md-6">
 
           <select name="department">
             <option value="no_department_selected">Department</option>
@@ -94,8 +97,7 @@
           </select>
         </div>
 
-
-        <div class="input_field form_control">
+        <div class="input_field form_control col-md-6">
 
           <select name="major_or_program">
             <option value="no_major_selected">Major or Program</option>
@@ -165,7 +167,7 @@
           </select>
         </div>
 
-        <div class="input_field form_control">
+        <div class="input_field form_control col-md-6">
           <select name="relation">
             <option value="no_relation_selected">Relation to Vanderbilt</option>
             <option value="Faculty">Faculty</option>
@@ -176,7 +178,9 @@
             <option value="Graduate Student">Graduate Student</option>
           </select>
         </div>
+      </div>
 
+      <div class="row">
         <div class="input_field form_control">
           <input type="hidden" class="form-control" id="fileValue" name="file_name">
         </div>
@@ -184,8 +188,7 @@
         <button type="submit" class="btn btn-success float-right">Add Profile</button>
       </form>
 
-    </div>
-  </div>
+</div>
 </div>
 
 <footer class="footer"> <%- include('../partials/footer'); %> </footer>

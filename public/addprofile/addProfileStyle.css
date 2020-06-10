@@ -1,8 +1,17 @@
 body {
-  text-align: center;
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 14px;
   background: #f2f2f2;
+}
+
+select {
+  width: 100%;
+  padding: 8px 10px 9px 10px;
+  height: 40px;
+  border: 1px solid #cccccc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
 }
 
 .clearfix:after {
@@ -14,8 +23,9 @@ body {
 }
 
 .form_wrapper {
+  font-size: 14px;
   background: #fff;
-  width: 668px;
+  width: 500px;
   max-width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

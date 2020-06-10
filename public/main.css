@@ -45,7 +45,7 @@ body {
 
 .form-elegant {
   position: relative;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .search-by {
