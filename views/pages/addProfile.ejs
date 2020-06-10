@@ -36,16 +36,15 @@
         <div class="input_field form_control">
           <div class="col_md_6 col_half" style="padding-left:15px;">
             <input type="hidden" name="key" value="${filename}">
-            <input type="file" name="file" id="fileName" required>
+            <input type="file" name="file" id="fileName">
           </div>
           <div class="col_md_6 col_half">
             <button onclick="getFileName()" type="submit" class="btn btn-success" style="float:right;">Upload Photo</button>
           </div>
         </div>
       </form>
-    </div>
-    <p>*note: you must press upload photo to confirm the image</p>
-      <form action="/addprofile" method="post" class="needs-validation" novalidate>
+      <br>
+      <form action="/addprofile" method="post" class="needs-validation">
         <div class="row clearfix">
           <div class="col_md_6 col_half">
             <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
@@ -64,7 +63,7 @@
         </div>
 
         <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-          <input type="email" name="email" placeholder="Email" required />
+          <input type="email" name="email" placeholder="Email" />
         </div>
 
         <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
@@ -80,7 +79,7 @@
         </div>
 
         <div class="input_field form_control"> <span><i aria-hidden="true" class="fa fa-suitcase"></i></span>
-          <input type="text" name="external_link" placeholder="Website or External Link" required />
+          <input type="text" name="external_link" placeholder="Website or External Link" />
         </div>
 
         </div>

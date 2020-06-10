@@ -13,7 +13,11 @@ module.exports = {
         let location = req.body.location;
         let phone = req.body.phone;
         let email = req.body.email;
-        let pic = 'http://changedirectory.s3.amazonaws.com/' + req.body.file_name;
+        let file_name = req.body.file_name;
+        if (file_name == ""){
+            file_name = "default-profile.png";
+        }
+        let pic = 'http://changedirectory.s3.amazonaws.com/' + file_name;
         let external_link = req.body.external_link;
         let department = req.body.department;
 
