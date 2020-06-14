@@ -107,7 +107,7 @@ function createContent(content, is_authenticated) {
 
   var link = document.createElement('a');
   link.setAttribute('class', 'btn btn-primary');
-  link.setAttribute('href', 'http://localhost:8080/profile$' + (content['uid'] - 1));
+  link.setAttribute('href', 'https://immense-harbor-88562.herokuapp.com/profile$' + (content['uid'] - 1));
   link.innerHTML = "More";
 
   // Append information (besides image) to the inner div
