@@ -116,5 +116,5 @@ app.get(/^\/deleteprofile\$(\d+)/, secured(), deletePage);
 app.post(/^\/profile\$(\d+)/, flagProfile);
 
 
-app.listen('5000');
+app.listen(process.env.PORT || 5000);
 console.log("Listening at 5000...");
