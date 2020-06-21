@@ -22,14 +22,16 @@ module.exports = {
     let major_or_program = req.body.major_or_program;
     let location = req.body.location;
     let occupation = req.body.occupation;
+    let organization = req.body.organization;
+    let graduation_year = req.body.graduation_year;
     let phone = req.body.phone;
     let email = req.body.email;
     let external_link = req.body.external_link;
     let pic = req.body.file_name;
 
-    var fields = [first_name, last_name, preferred_name, relation, major_or_program, location, occupation, phone, email, pic, external_link, index];
+    var fields = [first_name, last_name, preferred_name, relation, major_or_program, location, occupation, organization, graduation_year, phone, email, pic, external_link, index];
 
-    let query = "UPDATE pcbg SET first_name = ?, last_name = ?, preferred_name = ?, relation = ?, major_or_program = ?, location = ?, occupation = ?, phone = ?, email = ?, pic = ?, external_link = ? WHERE uid = ?";
+    let query = "UPDATE pcbg SET first_name = ?, last_name = ?, preferred_name = ?, relation = ?, major_or_program = ?, location = ?, occupation = ?, organization = ?, graduation_year = ?, phone = ?, email = ?, pic = ?, external_link = ? WHERE uid = ?";
 
     db.query(query, fields, (err) => {
       if (err) {
