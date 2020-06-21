@@ -20,7 +20,7 @@ function fillInData(results, is_authenticated) {
     p_no_results.innerHTML = 'No results were found.';
     var a_no_results = document.createElement('a');
     a_no_results.innerHTML = 'Try a new search.';
-    a_no_results.setAttribute('href', 'http://localhost:8080/');
+    a_no_results.setAttribute('href', 'https://immense-harbor-88562.herokuapp.com');
     no_results.appendChild(p_no_results);
     no_results.appendChild(a_no_results);
     row.appendChild(no_results);
@@ -107,7 +107,7 @@ function createContent(content, is_authenticated) {
 
   var link = document.createElement('a');
   link.setAttribute('class', 'btn btn-primary');
-  link.setAttribute('href', 'http://localhost:8080/profile$' + (content['uid'] - 1));
+  link.setAttribute('href', 'https://immense-harbor-88562.herokuapp.com/profile$' + (content['uid'] - 1));
   link.innerHTML = "More";
 
   // Append information (besides image) to the inner div
