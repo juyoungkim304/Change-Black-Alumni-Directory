@@ -20,10 +20,12 @@ module.exports = {
         let pic = 'http://changedirectory.s3.amazonaws.com/' + file_name;
         let external_link = req.body.external_link;
         let department = req.body.department;
+        let organization = req.body.organization;
+        let graduation_year = req.body.graduation_year;
 
-        var fields = [first_name, last_name, preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link, department]
+        var fields = [first_name, last_name, preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link, department, organization, graduation_year]
 
-        let query = "INSERT INTO pcbg (first_name, last_name,preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link, marked, department) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?)";
+        let query = "INSERT INTO pcbg (first_name, last_name,preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link, marked, department) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?, 2016)";
 
         db.query(query, fields, (error) => {
 
