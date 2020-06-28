@@ -7,11 +7,9 @@ body {
 }
 
 .h6, h6 {
-    font-size: .75rem !important;
+    font-size: .80rem !important;
     font-weight: 500;
-    font-family: Roboto,Helvetica,Arial,sans-serif;
     line-height: 1.5em;
-    text-transform: uppercase;
 }
 
 .name h6 {

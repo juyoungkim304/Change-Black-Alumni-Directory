@@ -25,23 +25,20 @@
               <div class="name">
 
                 <h3 class="title"><%=pcbg[index].first_name%> <%=pcbg[index].last_name%> (<%=pcbg[index].preferred_name%>)</h3>
-
-                <h6><%=pcbg[index].relation%> - <%=pcbg[index].department%> - <%=pcbg[index]
-                          .major_or_program%> —
-                  <%=pcbg[index].location%></h6>
-
                 <a href="tel:<%=pcbg[index].phone%>" class="btn btn-just-icon btn-link btn-phone"><i class="fa fa-phone"></i></a>
                 <a href="mailto: <%=pcbg[index].email%>" class="btn btn-just-icon btn-link btn-email"><i class="fa fa-envelope-o"></i></a>
                 <a href="<%=pcbg[index].external_link%>" class="btn btn-just-icon btn-link btn-email"><i class="fa fa-link"></i></a>
 
+                <h6><%=pcbg[index].relation%> - <%=pcbg[index].department%></h6>
+                <h6><%=pcbg[index].major_or_program%>, Class of <%=pcbg[index].graduation_year%></h6>
               </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="description text-center">
-            <p><%=pcbg[index].organization%>, Class of <%=pcbg[index].graduation_year%></p>
-            <p><%=pcbg[index].occupation%></p>
+            <p><%=pcbg[index].occupation%> at <%=pcbg[index].organization%></p>
+            <p><%=pcbg[index].location%></p>
             <%if(locals.user) {%>
             <p>FLAGGED? (ADMIN ONLY): <%=pcbg[index].marked%></p>
             <%}%>
@@ -61,6 +58,12 @@
 </div>
 </div>
 </div>
+
+<!-- Background Pre-loader -->
+<div style="width: 0; height: 0; overflow: hidden">
+  <img src="" width="1" height="1"> <img src="https://iili.io/JG4m8P.jpg" width="1" height="1">
+</div>
+
 <script>
 
   function displaySent() {
@@ -70,9 +73,6 @@
 
 
 </script>
-
-
-
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>

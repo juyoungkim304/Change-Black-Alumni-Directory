@@ -23,9 +23,12 @@ module.exports = {
         let organization = req.body.organization;
         let graduation_year = req.body.graduation_year;
 
+        console.log(organization);
+        console.log(graduation_year);
+
         var fields = [first_name, last_name, preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link, department, organization, graduation_year]
 
-        let query = "INSERT INTO pcbg (first_name, last_name,preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link, marked, department) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?, 2016)";
+        let query = "INSERT INTO pcbg (first_name, last_name,preferred_name, occupation, relation, major_or_program, location, phone, email, pic, external_link, marked, department, organization, graduation_year) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?, 2016)";
 
         db.query(query, fields, (error) => {
 
