@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/requestEdit/requestEdit.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form method="POST" action="/requestedit" id="contact">
+            <h3>Request Edit Profile</h3>
+            <br>
+            <h4>Request a change on an existing profile and the administrator will complete your request!</h4>
+            <br>
+            <fieldset>
+                <input placeholder="Your name" type="text" name="name" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Email Address" type="email" name="email" tabindex="2" required>
+            </fieldset>
+
+            <fieldset>
+                <input placeholder="Your Request" type="text" name="message" required>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("contact-submit").addEventListener("click", displaySent);
+
+        function displaySent() {
+            console.log("1")
+            alert("Thank you! Your Edit Request has been sent and will be reviewed by the administrator.");
+        }
+    </script>
+
+</body>
+
+</html>
