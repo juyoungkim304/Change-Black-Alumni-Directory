@@ -25,7 +25,7 @@ var sess = {
 };
 
 //session handling
-if (app.get('env') === 'production') {sess.cookie.secure = true;}
+if (app.get('env') === 'production') { sess.cookie.secure = true; }
 app.use(session(sess));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -79,12 +79,13 @@ db.connect((err) => {
 global.db = db;
 
 var login = require('./routes/auth.js');
-const {profilePage} = require('./routes/profile.js');
-const {flagProfile} = require('./routes/profile.js');
-const {searchPage} = require('./routes/searchresults.js');
-const {editPage, editedPage} = require('./routes/editProfile.js');
-const {addProfile, addedProfile} = require('./routes/addProfile.js');
-const {deletePage} = require('./routes/deleteProfile.js');
+const { profilePage } = require('./routes/profile.js');
+const { flagProfile } = require('./routes/profile.js');
+const { searchPage } = require('./routes/searchresults.js');
+const { editPage, editedPage } = require('./routes/editProfile.js');
+const { addProfile, addedProfile } = require('./routes/addProfile.js');
+const { deletePage } = require('./routes/deleteProfile.js');
+const { requestEditPage, requestEdit } = require('./routes/requestEdit.js');
 
 app.set('view engine', 'ejs');
 
@@ -92,7 +93,7 @@ app.use(userPermission());
 
 app.use('/public', express.static('public'));
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     console.log('Reached search-;landing.ejs');
     res.render('pages/search-landing');
 });
@@ -114,6 +115,10 @@ app.post(/^\/editprofile\$(\d+)/, editedPage);
 app.get(/^\/deleteprofile\$(\d+)/, secured(), deletePage);
 
 app.post(/^\/profile\$(\d+)/, flagProfile);
+
+app.get('/requestedit', requestEditPage);
+
+app.post('/requestedit', requestEdit);
 
 
 app.listen(process.env.PORT || 5000);
