@@ -62,7 +62,7 @@ passport.deserializeUser(function (user, done) {
 
 //database connection
 var db = mysql.createConnection({
-    host: 'blackalumnidirectory.cxs1kr4seklv.us-east-1.rds.amazonaws.com',
+    host: 'peabodyblackalumnidirectory.civtxazw9e92.us-east-1.rds.amazonaws.com',
     port: '3306',
     user: 'badg',
     password: 'blackalumni1',
