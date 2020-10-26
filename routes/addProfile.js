@@ -17,7 +17,7 @@ module.exports = {
         if (file_name == ""){
             file_name = "default-profile.png";
         }
-        let pic = 'https://peabodyblackalumnidirectory.s3.amazonaws.com/' + file_name;
+        let pic = 'http://peabodyblackalumnidirectory.s3.amazonaws.com/' + file_name;
         let external_link = req.body.external_link;
         let department = req.body.department;
         let organization = req.body.organization;
